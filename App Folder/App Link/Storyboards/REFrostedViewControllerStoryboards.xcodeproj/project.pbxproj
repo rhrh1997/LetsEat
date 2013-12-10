@@ -32,6 +32,7 @@
 		3032B8EA1805A4BF00064F85 /* DEMOSecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3032B8E91805A4BF00064F85 /* DEMOSecondViewController.m */; };
 		3032B8FD1805AB5600064F85 /* avatar@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3032B8FC1805AB5600064F85 /* avatar@2x.jpg */; };
 		3032B9001805BC8E00064F85 /* RECommonFunctions.m in Sources */ = {isa = PBXBuildFile; fileRef = 3032B8FF1805BC8E00064F85 /* RECommonFunctions.m */; };
+		731F68F51857DC1B008DE328 /* TestFile in Resources */ = {isa = PBXBuildFile; fileRef = 731F68F41857DC1B008DE328 /* TestFile */; };
 		7516E8281852B3E900CA8D26 /* REFrostedViewControllerExample-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7516E8271852B3E900CA8D26 /* REFrostedViewControllerExample-Info.plist */; };
 		7516E83318538B6F00CA8D26 /* BButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 7516E82C18538B6F00CA8D26 /* BButton.m */; };
 		7516E83418538B6F00CA8D26 /* NSString+FontAwesome.m in Sources */ = {isa = PBXBuildFile; fileRef = 7516E82E18538B6F00CA8D26 /* NSString+FontAwesome.m */; };
@@ -108,6 +109,7 @@
 		3032B8FC1805AB5600064F85 /* avatar@2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "avatar@2x.jpg"; sourceTree = "<group>"; };
 		3032B8FE1805BC8E00064F85 /* RECommonFunctions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RECommonFunctions.h; sourceTree = "<group>"; };
 		3032B8FF1805BC8E00064F85 /* RECommonFunctions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RECommonFunctions.m; sourceTree = "<group>"; };
+		731F68F41857DC1B008DE328 /* TestFile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = TestFile; sourceTree = "<group>"; };
 		7516E8271852B3E900CA8D26 /* REFrostedViewControllerExample-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "REFrostedViewControllerExample-Info.plist"; sourceTree = "<group>"; };
 		7516E82B18538B6F00CA8D26 /* BButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BButton.h; sourceTree = "<group>"; };
 		7516E82C18538B6F00CA8D26 /* BButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BButton.m; sourceTree = "<group>"; };
@@ -182,6 +184,7 @@
 		3032B8861805A10100064F85 = {
 			isa = PBXGroup;
 			children = (
+				731F68F41857DC1B008DE328 /* TestFile */,
 				3032B8D51805A21600064F85 /* REFrostedViewController */,
 				3032B8981805A10100064F85 /* REFrostedViewControllerStoryboards */,
 				3032B8B71805A10100064F85 /* REFrostedViewControllerStoryboardsTests */,
@@ -421,6 +424,7 @@
 				3032B8AB1805A10100064F85 /* Images.xcassets in Resources */,
 				7516E83618538B6F00CA8D26 /* FontAwesome.ttf in Resources */,
 				75D9013618304D8D009372AC /* menu.png in Resources */,
+				731F68F51857DC1B008DE328 /* TestFile in Resources */,
 				75D90138183083E4009372AC /* square_bg_@2X.png in Resources */,
 				3032B8FD1805AB5600064F85 /* avatar@2x.jpg in Resources */,
 				7516E8281852B3E900CA8D26 /* REFrostedViewControllerExample-Info.plist in Resources */,
