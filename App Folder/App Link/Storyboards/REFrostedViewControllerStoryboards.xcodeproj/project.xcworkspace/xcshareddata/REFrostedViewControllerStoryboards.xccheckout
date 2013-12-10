@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>EDFB09C3-0708-4DFA-B40B-A17FB70E97B4</string>
+	<key>IDESourceControlProjectName</key>
+	<string>REFrostedViewControllerStoryboards</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>FC8DE7E7-E142-45B9-8F07-F240BB2E0113</key>
+		<string>https://github.com/rhrh1997/LetsEat/trunk</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>App Folder/App Link/Storyboards/REFrostedViewControllerStoryboards.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>FC8DE7E7-E142-45B9-8F07-F240BB2E0113</key>
+		<string>../../../../..</string>
+	</dict>
+	<key>IDESourceControlProjectRepositoryRootDictionary</key>
+	<dict>
+		<key>FC8DE7E7-E142-45B9-8F07-F240BB2E0113</key>
+		<string>https://github.com/rhrh1997/LetsEat</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/rhrh1997/LetsEat/trunk/REFrostedViewController-master/Examples/Storyboards/REFrostedViewControllerStoryboards.xcodeproj</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>FC8DE7E7-E142-45B9-8F07-F240BB2E0113</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryBranchesRelativeLocationKey</key>
+			<string>branches</string>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.subversion</string>
+			<key>IDESourceControlRepositoryTrunkRelativeLocationKey</key>
+			<string>trunk</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>FC8DE7E7-E142-45B9-8F07-F240BB2E0113</string>
+			<key>IDESourceControlWCCName</key>
+			<string>LetsEat</string>
+		</dict>
+	</array>
+</dict>
+</plist>
