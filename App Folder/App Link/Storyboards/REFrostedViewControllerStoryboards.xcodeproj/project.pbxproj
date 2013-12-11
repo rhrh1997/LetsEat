@@ -33,6 +33,7 @@
 		3032B8FD1805AB5600064F85 /* avatar@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3032B8FC1805AB5600064F85 /* avatar@2x.jpg */; };
 		3032B9001805BC8E00064F85 /* RECommonFunctions.m in Sources */ = {isa = PBXBuildFile; fileRef = 3032B8FF1805BC8E00064F85 /* RECommonFunctions.m */; };
 		731F68F51857DC1B008DE328 /* TestFile in Resources */ = {isa = PBXBuildFile; fileRef = 731F68F41857DC1B008DE328 /* TestFile */; };
+		73446E141858EFE0008EC324 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75D90110182E8CE8009372AC /* Parse.framework */; };
 		7516E8281852B3E900CA8D26 /* REFrostedViewControllerExample-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7516E8271852B3E900CA8D26 /* REFrostedViewControllerExample-Info.plist */; };
 		7516E83318538B6F00CA8D26 /* BButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 7516E82C18538B6F00CA8D26 /* BButton.m */; };
 		7516E83418538B6F00CA8D26 /* NSString+FontAwesome.m in Sources */ = {isa = PBXBuildFile; fileRef = 7516E82E18538B6F00CA8D26 /* NSString+FontAwesome.m */; };
@@ -49,7 +50,6 @@
 		75D9010B182E8CBC009372AC /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75D9010A182E8CBC009372AC /* AudioToolbox.framework */; };
 		75D9010D182E8CD8009372AC /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75D9010C182E8CD8009372AC /* Security.framework */; };
 		75D9010F182E8CE2009372AC /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75D9010E182E8CE2009372AC /* MapKit.framework */; };
-		75D90111182E8CE8009372AC /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75D90110182E8CE8009372AC /* Parse.framework */; };
 		75D90113182E8E2A009372AC /* libz.1.1.3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 75D90112182E8E2A009372AC /* libz.1.1.3.dylib */; };
 		75D9011A182F74F8009372AC /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75D90119182F74F8009372AC /* FacebookSDK.framework */; };
 		75D90124182F7589009372AC /* libsqlite3.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 75D90123182F7589009372AC /* libsqlite3.0.dylib */; };
@@ -146,7 +146,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				75D90111182E8CE8009372AC /* Parse.framework in Frameworks */,
+				73446E141858EFE0008EC324 /* Parse.framework in Frameworks */,
 				75D9012A182F75A6009372AC /* Social.framework in Frameworks */,
 				75D90128182F75A1009372AC /* AdSupport.framework in Frameworks */,
 				75D90126182F7598009372AC /* Accounts.framework in Frameworks */,
@@ -599,6 +599,7 @@
 					"$(DEVELOPER_FRAMEWORKS_DIR)",
 					"/Users/RAZA/Desktop/REFrostedViewController-master/Examples/Storyboards",
 					"/Users/RAZA/Documents/Developer/REFrostedViewController-master/Examples/Storyboards",
+					"/Users/drewdennistoun/Developer/LetsEat/App\\ Folder/App\\ Link/Storyboards",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "REFrostedViewControllerStoryboards/REFrostedViewControllerStoryboards-Prefix.pch";
@@ -621,6 +622,7 @@
 					"$(DEVELOPER_FRAMEWORKS_DIR)",
 					"/Users/RAZA/Desktop/REFrostedViewController-master/Examples/Storyboards",
 					"/Users/RAZA/Documents/Developer/REFrostedViewController-master/Examples/Storyboards",
+					"/Users/drewdennistoun/Developer/LetsEat/App\\ Folder/App\\ Link/Storyboards",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "REFrostedViewControllerStoryboards/REFrostedViewControllerStoryboards-Prefix.pch";
