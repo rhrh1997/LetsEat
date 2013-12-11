@@ -11,3 +11,4 @@ BOOL REUIKitIsFlatMode();
 
 //This is a cool comment that should show up
 //Test 2
+//Test 3
