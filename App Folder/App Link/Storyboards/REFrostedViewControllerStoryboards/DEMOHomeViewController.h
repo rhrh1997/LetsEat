@@ -9,5 +9,11 @@
 @interface DEMOHomeViewController : UIViewController
 
 - (IBAction)showMenu;
+@property (unsafe_unretained, nonatomic) IBOutlet UIButton *Search;
+- (IBAction)pressed:(id)sender;
+
+
+
+
 
 @end

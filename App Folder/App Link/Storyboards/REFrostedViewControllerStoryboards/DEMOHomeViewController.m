@@ -16,4 +16,9 @@
     [self.frostedViewController presentMenuViewController];
 }
 
+
+
+- (IBAction)pressed:(id)sender {
+    NSLog(@"Pressy Pressy");
+}
 @end
