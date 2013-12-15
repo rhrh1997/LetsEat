@@ -4,6 +4,7 @@
 
 #import "DEMOAppDelegate.h"
 #import <Parse/Parse.h>
+#import <FlatUIKit.h>
 
 @implementation DEMOAppDelegate
 
@@ -14,6 +15,7 @@
                   clientKey:@"ooIpVOm4FZ68KUpMC1G8xicMESfP8kqpy5tuxwze"];
     [PFAnalytics trackAppOpenedWithLaunchOptions:launchOptions];
     return YES;
+
 }
 							
 - (void)applicationWillResignActive:(UIApplication *)application

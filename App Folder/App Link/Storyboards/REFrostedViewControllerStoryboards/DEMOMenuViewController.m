@@ -37,7 +37,7 @@
         
         UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(0, 150, 0, 24)];
         label.text = @"defEAT";
-        label.font = [UIFont fontWithName:@"Avenir" size:21];
+        label.font = [UIFont fontWithName:@"boldFlatFont" size:21];
         //HelveticaNeue was used before
         label.backgroundColor = [UIColor clearColor];
         label.textColor = [UIColor colorWithRed:62/255.0f green:68/255.0f blue:75/255.0f alpha:1.0f];
@@ -57,7 +57,7 @@
 {
     cell.backgroundColor = [UIColor clearColor];
     cell.textLabel.textColor = [UIColor colorWithRed:62/255.0f green:68/255.0f blue:75/255.0f alpha:1.0f];
-    cell.textLabel.font = [UIFont fontWithName:@"Avenir" size:17];
+    cell.textLabel.font = [UIFont fontWithName:@"boldFlatFont" size:17];
 }
 
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)sectionIndex
@@ -70,7 +70,7 @@
     
     UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(10, 8, 0, 0)];
     label.text = @"Profile";
-    label.font = [UIFont fontWithName:@"Avenir" size:17];
+    label.font = [UIFont fontWithName:@"boldFlatFont" size:17];
     label.textColor = [UIColor whiteColor];
     label.backgroundColor = [UIColor clearColor];
     [label sizeToFit];
