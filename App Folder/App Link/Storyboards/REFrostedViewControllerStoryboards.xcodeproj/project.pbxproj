@@ -33,12 +33,12 @@
 		3032B8FD1805AB5600064F85 /* avatar@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3032B8FC1805AB5600064F85 /* avatar@2x.jpg */; };
 		3032B9001805BC8E00064F85 /* RECommonFunctions.m in Sources */ = {isa = PBXBuildFile; fileRef = 3032B8FF1805BC8E00064F85 /* RECommonFunctions.m */; };
 		5EA966B8E9304DB9BF81342F /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C106F8B4317A4D788877CA30 /* libPods.a */; };
-		73446E141858EFE0008EC324 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75D90110182E8CE8009372AC /* Parse.framework */; };
 		7516E8281852B3E900CA8D26 /* REFrostedViewControllerExample-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7516E8271852B3E900CA8D26 /* REFrostedViewControllerExample-Info.plist */; };
 		7516E83318538B6F00CA8D26 /* BButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 7516E82C18538B6F00CA8D26 /* BButton.m */; };
 		7516E83418538B6F00CA8D26 /* NSString+FontAwesome.m in Sources */ = {isa = PBXBuildFile; fileRef = 7516E82E18538B6F00CA8D26 /* NSString+FontAwesome.m */; };
 		7516E83518538B6F00CA8D26 /* UIColor+BButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 7516E83018538B6F00CA8D26 /* UIColor+BButton.m */; };
 		7516E83618538B6F00CA8D26 /* FontAwesome.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7516E83218538B6F00CA8D26 /* FontAwesome.ttf */; };
+		756FEA25185EC9AD004476D1 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75D90110182E8CE8009372AC /* Parse.framework */; };
 		7594797C185BFE82005BC9ED /* Salmon Blur.JPG in Resources */ = {isa = PBXBuildFile; fileRef = 7594797B185BFE82005BC9ED /* Salmon Blur.JPG */; };
 		75AA700C1831687500F69D81 /* Background 9.png in Resources */ = {isa = PBXBuildFile; fileRef = 75AA700B1831687500F69D81 /* Background 9.png */; };
 		75AA700E1831792C00F69D81 /* menu@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 75AA700D1831792C00F69D81 /* menu@2x.png */; };
@@ -149,7 +149,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				73446E141858EFE0008EC324 /* Parse.framework in Frameworks */,
+				756FEA25185EC9AD004476D1 /* Parse.framework in Frameworks */,
 				75D9012A182F75A6009372AC /* Social.framework in Frameworks */,
 				75D90128182F75A1009372AC /* AdSupport.framework in Frameworks */,
 				75D90126182F7598009372AC /* Accounts.framework in Frameworks */,
@@ -643,6 +643,7 @@
 					"/Users/RAZA/Desktop/REFrostedViewController-master/Examples/Storyboards",
 					"/Users/RAZA/Documents/Developer/REFrostedViewController-master/Examples/Storyboards",
 					"/Users/drewdennistoun/Developer/LetsEat/App\\ Folder/App\\ Link/Storyboards",
+					"/Users/RAZA/Documents/Developer/LetsEat/App\\ Folder/App\\ Link/Storyboards",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "REFrostedViewControllerStoryboards/REFrostedViewControllerStoryboards-Prefix.pch";
@@ -667,6 +668,7 @@
 					"/Users/RAZA/Desktop/REFrostedViewController-master/Examples/Storyboards",
 					"/Users/RAZA/Documents/Developer/REFrostedViewController-master/Examples/Storyboards",
 					"/Users/drewdennistoun/Developer/LetsEat/App\\ Folder/App\\ Link/Storyboards",
+					"/Users/RAZA/Documents/Developer/LetsEat/App\\ Folder/App\\ Link/Storyboards",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "REFrostedViewControllerStoryboards/REFrostedViewControllerStoryboards-Prefix.pch";

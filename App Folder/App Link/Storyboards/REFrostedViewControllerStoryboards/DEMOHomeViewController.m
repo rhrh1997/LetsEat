@@ -13,8 +13,22 @@
 
 @implementation DEMOHomeViewController
 
+CLLocationManager *locationManager;
+
+- (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar
+{
+    [searchBar resignFirstResponder];
+    // Do the search...
+}
+
+
 -(void)viewDidLoad
 {
+    
+    locationManager = [[CLLocationManager alloc] init];
+    locationManager.distanceFilter = kCLDistanceFilterNone; // whenever we move
+    locationManager.desiredAccuracy = kCLLocationAccuracyHundredMeters; // 100 m
+    [locationManager startUpdatingLocation];
     
     NSLog(@"%@", self.navigationController.viewControllers );
 
@@ -109,6 +123,15 @@
 
 }
 
+- (IBAction)curPress:(id)sender {
+    
+    NSLog(@"Pressed curLocs");
+    NSString *curLocs =[NSString stringWithFormat:@"latitude: %f longitude: %f", locationManager.location.coordinate.latitude, locationManager.location.coordinate.longitude];
+    self.nearSearch.text= curLocs;
+    NSLog(@"%@", curLocs);
+
+}
+
 - (IBAction)showMenu
 {
     [self.frostedViewController presentMenuViewController];
@@ -117,6 +140,10 @@
 
 - (IBAction)pressed:(id)sender {
     NSLog(@"Pressy Pressy");
+    
+
 
 }
+
+
 @end

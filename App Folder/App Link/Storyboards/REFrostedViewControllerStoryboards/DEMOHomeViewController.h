@@ -6,8 +6,10 @@
 #import <UIKit/UIKit.h>
 #import "REFrostedViewController.h"
 #import <FlatUIKit.h>
+#import <CoreLocation/CoreLocation.h>
 
-@interface DEMOHomeViewController : UIViewController
+
+@interface DEMOHomeViewController : UIViewController <UISearchBarDelegate>
 
 @property (strong, nonatomic) IBOutlet FUIButton *searchButton;
 @property (strong, nonatomic) IBOutlet UILabel *whatEat;
@@ -17,7 +19,7 @@
 @property (strong, nonatomic) IBOutlet FUISegmentedControl *mileage;
 @property (strong, nonatomic) IBOutlet FUIButton *curLoc;
 
-
+- (IBAction)curPress:(id)sender;
 
 - (IBAction)showMenu;
 
