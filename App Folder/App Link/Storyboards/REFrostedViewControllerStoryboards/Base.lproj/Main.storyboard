@@ -66,6 +66,7 @@
                         <segue destination="jsP-Dz-DYG" kind="relationship" relationship="rootViewController" id="LUF-1Q-jf3"/>
                         <segue destination="yGP-ij-jME" kind="push" identifier="Second" id="fOf-2J-bLN"/>
                         <segue destination="jWw-J3-BnP" kind="push" id="cXF-14-ZNH"/>
+                        <segue destination="bWo-8c-6Hz" kind="push" id="XeQ-DX-glm"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zzD-df-7on" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -343,7 +344,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="a9H-E1-35D" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2972" y="948"/>
+            <point key="canvasLocation" x="2836" y="686"/>
         </scene>
         <!--Menu View Controller-->
         <scene sceneID="QYK-Xf-W03">
@@ -392,7 +393,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SBM-yN-hYn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1598" y="801"/>
+            <point key="canvasLocation" x="1646" y="909"/>
         </scene>
         <!--Table View Controller - Messages-->
         <scene sceneID="cbK-Ns-Dj3">
@@ -434,7 +435,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="S87-6P-4ga" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2188" y="768"/>
+            <point key="canvasLocation" x="2268" y="704"/>
         </scene>
         <!--View Controller - Settings-->
         <scene sceneID="dx4-IE-TMJ">
@@ -467,6 +468,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
+                    <navigationItem key="navigationItem" id="yLJ-8l-unU"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AxL-7j-Qcl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -518,10 +520,10 @@
             </objects>
             <point key="canvasLocation" x="2580" y="1540"/>
         </scene>
-        <!--View Controller-->
+        <!--View Controller - Menu-->
         <scene sceneID="nRH-tN-m7e">
             <objects>
-                <viewController id="KI6-nL-F1P" sceneMemberID="viewController">
+                <viewController title="Menu" id="KI6-nL-F1P" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="VAe-Oh-JzY"/>
                         <viewControllerLayoutGuide type="bottom" id="NAC-eZ-ZsP"/>
@@ -559,7 +561,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="18s-sI-uCh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2770" y="-42"/>
+            <point key="canvasLocation" x="2744" y="-142"/>
         </scene>
     </scenes>
     <resources>
@@ -573,6 +575,6 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="70m-1x-Zrg"/>
+        <segue reference="a79-RB-vQ1"/>
     </inferredMetricsTieBreakers>
 </document>

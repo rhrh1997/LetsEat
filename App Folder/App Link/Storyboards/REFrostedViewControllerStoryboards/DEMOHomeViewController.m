@@ -43,8 +43,8 @@ CLLocationManager *locationManager;
        //UINavigationController *navCon  = (UINavigationController*) [self.navigationController.viewControllers objectAtIndex:0];
        //navCon.navigationItem.title = @"Hello";
     
-    [self.navigationController.navigationBar setBarTintColor:
-    [UIColor colorWithRed:0.0f/256.0f green:206.0f/256.0f blue:106.0f/256.0f alpha:1]];
+    [self.navigationController.navigationBar setBarTintColor: [UIColor emerlandColor]];
+    //[UIColor colorWithRed:0.0f/256.0f green:206.0f/256.0f blue:106.0f/256.0f alpha:1]];
     //[self.navigationController.navigationBar setTranslucent:NO];
        //[self.navigationController.navigationBar setTitleTextAttributes:@{[UIColor whiteColor]:NSBackgroundColorAttributeName}];
        //[self.navigationController.navigationBar setTitleTextAttributes:@{[UIFont fontWithName:@"Avenir"size:16.0]:NSFontAttributeName}];
@@ -151,9 +151,14 @@ CLLocationManager *locationManager;
 - (IBAction)pressed:(id)sender {
     //Search button
     NSLog(@"Pressy Pressy");
-    NSArray  * search = [NSArray arrayWithObjects:@"foo",@"bar",@"baz",nil];
+    NSString *what = self.whatSearch.text;
+    NSString *where = self.nearSearch.text;
+    NSString *mileage = @"5";
+    //self.mileage.selectedSegmentIndex;
+    NSArray  * search = [NSArray arrayWithObjects:what,where,mileage,nil];
     [self.afterSearchload startAnimating];
     [self.afterSearchlabel setHidden:NO];
+
     
 
 }
