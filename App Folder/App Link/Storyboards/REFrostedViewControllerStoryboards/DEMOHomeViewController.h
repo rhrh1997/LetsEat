@@ -14,6 +14,8 @@
 @property (strong, nonatomic) IBOutlet UILabel *nearWhere;
 @property (strong, nonatomic) IBOutlet UISearchBar *whatSearch;
 @property (strong, nonatomic) IBOutlet UISearchBar *nearSearch;
+@property (strong, nonatomic) IBOutlet FUISegmentedControl *mileage;
+@property (strong, nonatomic) IBOutlet FUIButton *curLoc;
 
 
 

@@ -87,7 +87,7 @@
                                 <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <searchBar contentMode="redraw" fixedFrame="YES" searchBarStyle="minimal" placeholder="ie: Houston or 77429" backgroundImage="bluetint.png" translatesAutoresizingMaskIntoConstraints="NO" id="Yz5-k9-HW0">
+                            <searchBar contentMode="redraw" fixedFrame="YES" searchBarStyle="minimal" placeholder="ie: 77429        .  " backgroundImage="bluetint.png" translatesAutoresizingMaskIntoConstraints="NO" id="Yz5-k9-HW0">
                                 <rect key="frame" x="0.0" y="249" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <color key="barTintColor" red="0.74958147320000001" green="0.1477251409" blue="0.049252552169999998" alpha="1" colorSpace="calibratedRGB"/>
@@ -114,13 +114,29 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9lD-l7-9iL" customClass="FUIButton">
-                                <rect key="frame" x="112" y="331" width="96" height="29"/>
+                                <rect key="frame" x="112" y="361" width="96" height="29"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Search"/>
                                 <connections>
                                     <action selector="pressed:" destination="jsP-Dz-DYG" eventType="touchUpInside" id="l55-CE-M1j"/>
                                     <segue destination="lUE-cs-QgA" kind="push" id="CuQ-w5-t4a"/>
                                 </connections>
+                            </button>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="V7r-Nm-oIy" customClass="FUISegmentedControl">
+                                <rect key="frame" x="71" y="308" width="178" height="29"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <segments>
+                                    <segment title="5 Mi"/>
+                                    <segment title="10 Mi"/>
+                                    <segment title="15 Mi"/>
+                                </segments>
+                            </segmentedControl>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yv6-2c-0XP" customClass="FUIButton">
+                                <rect key="frame" x="196" y="257" width="116" height="28"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Current Location">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
                             </button>
                         </subviews>
                     </view>
@@ -132,6 +148,8 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="curLoc" destination="Yv6-2c-0XP" id="SHV-ev-uFW"/>
+                        <outlet property="mileage" destination="V7r-Nm-oIy" id="zyf-NQ-PHh"/>
                         <outlet property="nearSearch" destination="Yz5-k9-HW0" id="ATK-fw-Ycb"/>
                         <outlet property="nearWhere" destination="5yL-Em-NAf" id="vpR-Y0-Z3w"/>
                         <outlet property="searchButton" destination="9lD-l7-9iL" id="lga-EB-0Ky"/>
