@@ -25,7 +25,17 @@ CLLocationManager *locationManager;
 -(void)viewDidLoad
 {
     
-    //
+    //Current Order setup
+    self.curOrder.buttonColor = [UIColor redColor];
+    self.curOrder.shadowColor = [UIColor greenSeaColor];
+    self.curOrder.shadowHeight = 0.0f;
+    self.curOrder.cornerRadius = 4.0f;
+    self.curOrder.titleLabel.font = [UIFont flatFontOfSize:16];
+    [self.curOrder setTitleColor:[UIColor cloudsColor] forState:UIControlStateNormal];
+    [self.curOrder setTitleColor:[UIColor cloudsColor] forState:UIControlStateHighlighted];
+    
+    
+    //Loading set stop
     [self.afterSearchload stopAnimating];
     self.afterSearchlabel.font= [UIFont boldFlatFontOfSize:16];
     
@@ -126,9 +136,16 @@ CLLocationManager *locationManager;
     }
     
         
+    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc]
+                                   initWithTarget:self
+                                   action:@selector(dismissKeyboard)];
     
+    [self.view addGestureRecognizer:tap];
  
 
+}
+
+- (IBAction)curOrdTouch:(id)sender {
 }
 
 - (IBAction)curPress:(id)sender {
@@ -139,6 +156,10 @@ CLLocationManager *locationManager;
     self.nearSearch.text= curLocs;
     NSLog(@"%@", curLocs);
 
+}
+-(void)dismissKeyboard {
+    [self.whatSearch resignFirstResponder];
+    [self.nearSearch resignFirstResponder];
 }
 
 - (IBAction)showMenu
@@ -162,6 +183,8 @@ CLLocationManager *locationManager;
     
 
 }
+
+
 
 
 @end

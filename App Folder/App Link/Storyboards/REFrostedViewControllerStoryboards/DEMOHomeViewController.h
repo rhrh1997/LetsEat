@@ -20,7 +20,9 @@
 @property (strong, nonatomic) IBOutlet FUIButton *curLoc;
 @property (strong, nonatomic) IBOutlet UIActivityIndicatorView *afterSearchload;
 @property (strong, nonatomic) IBOutlet UILabel *afterSearchlabel;
+@property (strong, nonatomic) IBOutlet FUIButton *curOrder;
 
+- (IBAction)curOrdTouch:(id)sender;
 
 - (IBAction)curPress:(id)sender;
 
