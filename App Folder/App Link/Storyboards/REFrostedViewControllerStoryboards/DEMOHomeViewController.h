@@ -18,6 +18,9 @@
 @property (strong, nonatomic) IBOutlet UISearchBar *nearSearch;
 @property (strong, nonatomic) IBOutlet FUISegmentedControl *mileage;
 @property (strong, nonatomic) IBOutlet FUIButton *curLoc;
+@property (strong, nonatomic) IBOutlet UIActivityIndicatorView *afterSearchload;
+@property (strong, nonatomic) IBOutlet UILabel *afterSearchlabel;
+
 
 - (IBAction)curPress:(id)sender;
 

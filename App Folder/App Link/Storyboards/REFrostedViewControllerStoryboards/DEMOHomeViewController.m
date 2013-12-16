@@ -25,23 +25,31 @@ CLLocationManager *locationManager;
 -(void)viewDidLoad
 {
     
+    //
+    [self.afterSearchload stopAnimating];
+    self.afterSearchlabel.font= [UIFont boldFlatFontOfSize:16];
+    
+    //Initiating location manager
     locationManager = [[CLLocationManager alloc] init];
     locationManager.distanceFilter = kCLDistanceFilterNone; // whenever we move
     locationManager.desiredAccuracy = kCLLocationAccuracyHundredMeters; // 100 m
     [locationManager startUpdatingLocation];
     
-    NSLog(@"%@", self.navigationController.viewControllers );
+    //Checking navigation controller
+    //NSLog(@"%@", self.navigationController.viewControllers );
 
+    //Navigation Bar
     self.title = @"Let's Eat";
-   //UINavigationController *navCon  = (UINavigationController*) [self.navigationController.viewControllers objectAtIndex:0];
-   //navCon.navigationItem.title = @"Hello";
+       //UINavigationController *navCon  = (UINavigationController*) [self.navigationController.viewControllers objectAtIndex:0];
+       //navCon.navigationItem.title = @"Hello";
     
     [self.navigationController.navigationBar setBarTintColor:
     [UIColor colorWithRed:0.0f/256.0f green:206.0f/256.0f blue:106.0f/256.0f alpha:1]];
     //[self.navigationController.navigationBar setTranslucent:NO];
-    //[self.navigationController.navigationBar setTitleTextAttributes:@{[UIColor whiteColor]:NSBackgroundColorAttributeName}];
-    //[self.navigationController.navigationBar setTitleTextAttributes:@{[UIFont fontWithName:@'Avenir'size:16.0]:NSFontAttributeName}];
+       //[self.navigationController.navigationBar setTitleTextAttributes:@{[UIColor whiteColor]:NSBackgroundColorAttributeName}];
+       //[self.navigationController.navigationBar setTitleTextAttributes:@{[UIFont fontWithName:@"Avenir"size:16.0]:NSFontAttributeName}];
 
+    //Search Button
     self.searchButton.buttonColor = [UIColor emerlandColor];
     self.searchButton.shadowColor = [UIColor greenSeaColor];
     self.searchButton.shadowHeight = 0.0f;
@@ -59,7 +67,7 @@ CLLocationManager *locationManager;
     [self.curLoc setTitleColor:[UIColor cloudsColor] forState:UIControlStateNormal];
     [self.curLoc setTitleColor:[UIColor cloudsColor] forState:UIControlStateHighlighted];
     
-    //
+    //searchfields
     
     self.whatEat.font = [UIFont boldFlatFontOfSize:16];
     
@@ -125,6 +133,7 @@ CLLocationManager *locationManager;
 
 - (IBAction)curPress:(id)sender {
     
+    //Current Location Button press
     NSLog(@"Pressed curLocs");
     NSString *curLocs =[NSString stringWithFormat:@"latitude: %f longitude: %f", locationManager.location.coordinate.latitude, locationManager.location.coordinate.longitude];
     self.nearSearch.text= curLocs;
@@ -134,14 +143,18 @@ CLLocationManager *locationManager;
 
 - (IBAction)showMenu
 {
+    //Menu button
     [self.frostedViewController presentMenuViewController];
 }
 
 
 - (IBAction)pressed:(id)sender {
+    //Search button
     NSLog(@"Pressy Pressy");
+    NSArray  * search = [NSArray arrayWithObjects:@"foo",@"bar",@"baz",nil];
+    [self.afterSearchload startAnimating];
+    [self.afterSearchlabel setHidden:NO];
     
-
 
 }
 
