@@ -39,6 +39,7 @@
 		7516E83518538B6F00CA8D26 /* UIColor+BButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 7516E83018538B6F00CA8D26 /* UIColor+BButton.m */; };
 		7516E83618538B6F00CA8D26 /* FontAwesome.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7516E83218538B6F00CA8D26 /* FontAwesome.ttf */; };
 		756FEA25185EC9AD004476D1 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75D90110182E8CE8009372AC /* Parse.framework */; };
+		756FEA2918616B64004476D1 /* CurrentOrderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 756FEA2718616B64004476D1 /* CurrentOrderViewController.m */; };
 		7594797C185BFE82005BC9ED /* Salmon Blur.JPG in Resources */ = {isa = PBXBuildFile; fileRef = 7594797B185BFE82005BC9ED /* Salmon Blur.JPG */; };
 		75AA700C1831687500F69D81 /* Background 9.png in Resources */ = {isa = PBXBuildFile; fileRef = 75AA700B1831687500F69D81 /* Background 9.png */; };
 		75AA700E1831792C00F69D81 /* menu@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 75AA700D1831792C00F69D81 /* menu@2x.png */; };
@@ -118,6 +119,8 @@
 		7516E82F18538B6F00CA8D26 /* UIColor+BButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+BButton.h"; sourceTree = "<group>"; };
 		7516E83018538B6F00CA8D26 /* UIColor+BButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+BButton.m"; sourceTree = "<group>"; };
 		7516E83218538B6F00CA8D26 /* FontAwesome.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = FontAwesome.ttf; sourceTree = "<group>"; };
+		756FEA2618616B64004476D1 /* CurrentOrderViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CurrentOrderViewController.h; sourceTree = "<group>"; };
+		756FEA2718616B64004476D1 /* CurrentOrderViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CurrentOrderViewController.m; sourceTree = "<group>"; };
 		7594797B185BFE82005BC9ED /* Salmon Blur.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Salmon Blur.JPG"; sourceTree = "<group>"; };
 		75AA700B1831687500F69D81 /* Background 9.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Background 9.png"; sourceTree = "<group>"; };
 		75AA700D1831792C00F69D81 /* menu@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "menu@2x.png"; sourceTree = "<group>"; };
@@ -316,6 +319,8 @@
 				3032B8E61805A26500064F85 /* DEMONavigationController.m */,
 				3032B8E81805A4BF00064F85 /* DEMOSecondViewController.h */,
 				3032B8E91805A4BF00064F85 /* DEMOSecondViewController.m */,
+				756FEA2618616B64004476D1 /* CurrentOrderViewController.h */,
+				756FEA2718616B64004476D1 /* CurrentOrderViewController.m */,
 			);
 			name = Controllers;
 			path = REFrostedViewControllerStoryboards;
@@ -501,6 +506,7 @@
 				7516E83418538B6F00CA8D26 /* NSString+FontAwesome.m in Sources */,
 				3032B8A91805A10100064F85 /* DEMORootViewController.m in Sources */,
 				3032B8EA1805A4BF00064F85 /* DEMOSecondViewController.m in Sources */,
+				756FEA2918616B64004476D1 /* CurrentOrderViewController.m in Sources */,
 				3032B8E21805A21600064F85 /* UIImage+REFrostedViewController.m in Sources */,
 				3032B8D11805A1D200064F85 /* DEMOMenuViewController.m in Sources */,
 				3032B8A31805A10100064F85 /* DEMOAppDelegate.m in Sources */,
