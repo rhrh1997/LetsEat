@@ -60,6 +60,7 @@
 		75D9012A182F75A6009372AC /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75D90129182F75A6009372AC /* Social.framework */; };
 		75D9013618304D8D009372AC /* menu.png in Resources */ = {isa = PBXBuildFile; fileRef = 75D9013518304D8D009372AC /* menu.png */; };
 		75D90138183083E4009372AC /* square_bg_@2X.png in Resources */ = {isa = PBXBuildFile; fileRef = 75D90137183083E4009372AC /* square_bg_@2X.png */; };
+		75E36F0218633B7200300EF7 /* OrderSummaryAndPayment.m in Sources */ = {isa = PBXBuildFile; fileRef = 75E36F0118633B7200300EF7 /* OrderSummaryAndPayment.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -143,6 +144,8 @@
 		75D90129182F75A6009372AC /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 		75D9013518304D8D009372AC /* menu.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = menu.png; sourceTree = "<group>"; };
 		75D90137183083E4009372AC /* square_bg_@2X.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "square_bg_@2X.png"; sourceTree = "<group>"; };
+		75E36F0018633B7200300EF7 /* OrderSummaryAndPayment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OrderSummaryAndPayment.h; sourceTree = "<group>"; };
+		75E36F0118633B7200300EF7 /* OrderSummaryAndPayment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OrderSummaryAndPayment.m; sourceTree = "<group>"; };
 		B1895BAEF11649E0AE7343EE /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 		C106F8B4317A4D788877CA30 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -321,6 +324,8 @@
 				3032B8E91805A4BF00064F85 /* DEMOSecondViewController.m */,
 				756FEA2618616B64004476D1 /* CurrentOrderViewController.h */,
 				756FEA2718616B64004476D1 /* CurrentOrderViewController.m */,
+				75E36F0018633B7200300EF7 /* OrderSummaryAndPayment.h */,
+				75E36F0118633B7200300EF7 /* OrderSummaryAndPayment.m */,
 			);
 			name = Controllers;
 			path = REFrostedViewControllerStoryboards;
@@ -503,6 +508,7 @@
 				3032B9001805BC8E00064F85 /* RECommonFunctions.m in Sources */,
 				3032B8E31805A21600064F85 /* UIView+REFrostedViewController.m in Sources */,
 				3032B89F1805A10100064F85 /* main.m in Sources */,
+				75E36F0218633B7200300EF7 /* OrderSummaryAndPayment.m in Sources */,
 				7516E83418538B6F00CA8D26 /* NSString+FontAwesome.m in Sources */,
 				3032B8A91805A10100064F85 /* DEMORootViewController.m in Sources */,
 				3032B8EA1805A4BF00064F85 /* DEMOSecondViewController.m in Sources */,

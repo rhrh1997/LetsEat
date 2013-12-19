@@ -172,13 +172,15 @@ CLLocationManager *locationManager;
 - (IBAction)pressed:(id)sender {
     //Search button
     NSLog(@"Pressy Pressy");
+    [self.afterSearchload startAnimating];
+    [self.afterSearchlabel setHidden:NO];
     NSString *what = self.whatSearch.text;
     NSString *where = self.nearSearch.text;
     NSString *mileage = @"5";
     //self.mileage.selectedSegmentIndex;
     NSArray  * search = [NSArray arrayWithObjects:what,where,mileage,nil];
-    [self.afterSearchload startAnimating];
-    [self.afterSearchlabel setHidden:NO];
+    [self.afterSearchload stopAnimating];
+    [self.afterSearchlabel setHidden:YES];
 
     
 
