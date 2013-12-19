@@ -36,7 +36,7 @@
         imageView.clipsToBounds = YES;
         
         UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(0, 150, 0, 24)];
-        label.text = @"defEAT";
+        label.text = @"Let's Eat";
         label.font = [UIFont boldFlatFontOfSize:21];
         //label.font = [UIFont fontWithName:@"Avenir" size:21];
         //HelveticaNeue was used before
