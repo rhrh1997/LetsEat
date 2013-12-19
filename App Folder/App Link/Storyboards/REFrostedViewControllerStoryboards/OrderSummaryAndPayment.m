@@ -25,8 +25,8 @@
 
 - (void)viewDidLoad
 {
-    self.payCash.buttonColor = [UIColor greenSeaColor];
-    self.payCash.shadowColor = [UIColor greenColor];
+    self.payCash.buttonColor = [UIColor alizarinColor];
+    self.payCash.shadowColor = [UIColor pomegranateColor];
     self.payCash.shadowHeight = 1.0f;
     self.payCash.cornerRadius = 6.0f;
     self.payCash.titleLabel.font = [UIFont boldFlatFontOfSize:16];
@@ -42,16 +42,16 @@
     [self.payButton setTitleColor:[UIColor cloudsColor] forState:UIControlStateNormal];
     [self.payButton setTitleColor:[UIColor cloudsColor] forState:UIControlStateHighlighted];
     
-    self.payPayPal.buttonColor = [UIColor greenSeaColor];
-    self.payPayPal.shadowColor = [UIColor greenColor];
+    self.payPayPal.buttonColor = [UIColor alizarinColor];
+    self.payPayPal.shadowColor = [UIColor pomegranateColor];
     self.payPayPal.shadowHeight = 1.0f;
     self.payPayPal.cornerRadius = 6.0f;
     self.payPayPal.titleLabel.font = [UIFont boldFlatFontOfSize:16];
     [self.payPayPal setTitleColor:[UIColor cloudsColor] forState:UIControlStateNormal];
     [self.payPayPal setTitleColor:[UIColor cloudsColor] forState:UIControlStateHighlighted];
     
-    self.payCard.buttonColor = [UIColor greenSeaColor];
-    self.payCard.shadowColor = [UIColor greenColor];
+    self.payCard.buttonColor = [UIColor alizarinColor];
+    self.payCard.shadowColor = [UIColor pomegranateColor];
     self.payCard.shadowHeight = 1.0f;
     self.payCard.cornerRadius = 6.0f;
     self.payCard.titleLabel.font = [UIFont boldFlatFontOfSize:16];
@@ -60,7 +60,8 @@
     
     
     self.payPopover.hidden = YES;
-    self.payPopover.backgroundColor = [UIColor emerlandColor];
+    self.payPopover.backgroundColor = [UIColor peterRiverColor];
+    self.payPopover.opaque = NO;
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
 }
