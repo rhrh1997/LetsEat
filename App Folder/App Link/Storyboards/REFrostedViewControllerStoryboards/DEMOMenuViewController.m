@@ -137,7 +137,7 @@
     }
     
     if (indexPath.section == 0) {
-        NSArray *titles = @[@"sEArch", @"Orders", @"Messages", @"Favorites"];
+        NSArray *titles = @[@"Search", @"Orders", @"Messages", @"Favorites"];
         cell.textLabel.text = titles[indexPath.row];
     } else {
         NSArray *titles = @[@"Food Feed", @"My Feed", @"Account", @"Settings"];
