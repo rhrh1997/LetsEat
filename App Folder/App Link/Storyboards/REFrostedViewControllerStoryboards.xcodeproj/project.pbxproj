@@ -61,6 +61,10 @@
 		75D9013618304D8D009372AC /* menu.png in Resources */ = {isa = PBXBuildFile; fileRef = 75D9013518304D8D009372AC /* menu.png */; };
 		75D90138183083E4009372AC /* square_bg_@2X.png in Resources */ = {isa = PBXBuildFile; fileRef = 75D90137183083E4009372AC /* square_bg_@2X.png */; };
 		75E36F0218633B7200300EF7 /* OrderSummaryAndPayment.m in Sources */ = {isa = PBXBuildFile; fileRef = 75E36F0118633B7200300EF7 /* OrderSummaryAndPayment.m */; };
+		75E36F0E186369B800300EF7 /* MessagesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 75E36F0D186369B800300EF7 /* MessagesViewController.m */; };
+		75E36F1118636A1C00300EF7 /* OrderCheck.m in Sources */ = {isa = PBXBuildFile; fileRef = 75E36F1018636A1C00300EF7 /* OrderCheck.m */; };
+		75E36F1418636A7F00300EF7 /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 75E36F1318636A7F00300EF7 /* SettingsViewController.m */; };
+		75E36F1718636AAD00300EF7 /* LoginLogoutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 75E36F1618636AAD00300EF7 /* LoginLogoutViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -146,6 +150,14 @@
 		75D90137183083E4009372AC /* square_bg_@2X.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "square_bg_@2X.png"; sourceTree = "<group>"; };
 		75E36F0018633B7200300EF7 /* OrderSummaryAndPayment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OrderSummaryAndPayment.h; sourceTree = "<group>"; };
 		75E36F0118633B7200300EF7 /* OrderSummaryAndPayment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OrderSummaryAndPayment.m; sourceTree = "<group>"; };
+		75E36F0C186369B800300EF7 /* MessagesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessagesViewController.h; sourceTree = "<group>"; };
+		75E36F0D186369B800300EF7 /* MessagesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessagesViewController.m; sourceTree = "<group>"; };
+		75E36F0F18636A1C00300EF7 /* OrderCheck.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OrderCheck.h; sourceTree = "<group>"; };
+		75E36F1018636A1C00300EF7 /* OrderCheck.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OrderCheck.m; sourceTree = "<group>"; };
+		75E36F1218636A7F00300EF7 /* SettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsViewController.h; sourceTree = "<group>"; };
+		75E36F1318636A7F00300EF7 /* SettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsViewController.m; sourceTree = "<group>"; };
+		75E36F1518636AAD00300EF7 /* LoginLogoutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginLogoutViewController.h; sourceTree = "<group>"; };
+		75E36F1618636AAD00300EF7 /* LoginLogoutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginLogoutViewController.m; sourceTree = "<group>"; };
 		B1895BAEF11649E0AE7343EE /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 		C106F8B4317A4D788877CA30 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -194,7 +206,9 @@
 		3032B8861805A10100064F85 = {
 			isa = PBXGroup;
 			children = (
-				3032B8FB1805AB4600064F85 /* Controllers */,
+				75E36F1818636AC000300EF7 /* Menu View Controllers */,
+				75E36F1918636B0900300EF7 /* Order Process */,
+				3032B8FB1805AB4600064F85 /* Function Controllers */,
 				3032B8981805A10100064F85 /* REFrostedViewControllerStoryboards */,
 				3032B8B71805A10100064F85 /* REFrostedViewControllerStoryboardsTests */,
 				3032B8911805A10100064F85 /* Frameworks */,
@@ -309,25 +323,21 @@
 			path = ../../../REFrostedViewController;
 			sourceTree = "<group>";
 		};
-		3032B8FB1805AB4600064F85 /* Controllers */ = {
+		3032B8FB1805AB4600064F85 /* Function Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				3032B8A71805A10100064F85 /* DEMORootViewController.h */,
-				3032B8A81805A10100064F85 /* DEMORootViewController.m */,
 				3032B8CC1805A1BC00064F85 /* DEMOHomeViewController.h */,
 				3032B8CD1805A1BC00064F85 /* DEMOHomeViewController.m */,
-				3032B8CF1805A1D200064F85 /* DEMOMenuViewController.h */,
-				3032B8D01805A1D200064F85 /* DEMOMenuViewController.m */,
-				3032B8E51805A26500064F85 /* DEMONavigationController.h */,
-				3032B8E61805A26500064F85 /* DEMONavigationController.m */,
 				3032B8E81805A4BF00064F85 /* DEMOSecondViewController.h */,
 				3032B8E91805A4BF00064F85 /* DEMOSecondViewController.m */,
-				756FEA2618616B64004476D1 /* CurrentOrderViewController.h */,
-				756FEA2718616B64004476D1 /* CurrentOrderViewController.m */,
-				75E36F0018633B7200300EF7 /* OrderSummaryAndPayment.h */,
-				75E36F0118633B7200300EF7 /* OrderSummaryAndPayment.m */,
+				75E36F0C186369B800300EF7 /* MessagesViewController.h */,
+				75E36F0D186369B800300EF7 /* MessagesViewController.m */,
+				75E36F1218636A7F00300EF7 /* SettingsViewController.h */,
+				75E36F1318636A7F00300EF7 /* SettingsViewController.m */,
+				75E36F1518636AAD00300EF7 /* LoginLogoutViewController.h */,
+				75E36F1618636AAD00300EF7 /* LoginLogoutViewController.m */,
 			);
-			name = Controllers;
+			name = "Function Controllers";
 			path = REFrostedViewControllerStoryboards;
 			sourceTree = "<group>";
 		};
@@ -359,6 +369,34 @@
 				7516E83218538B6F00CA8D26 /* FontAwesome.ttf */,
 			);
 			path = resources;
+			sourceTree = "<group>";
+		};
+		75E36F1818636AC000300EF7 /* Menu View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				3032B8CF1805A1D200064F85 /* DEMOMenuViewController.h */,
+				3032B8D01805A1D200064F85 /* DEMOMenuViewController.m */,
+				3032B8E61805A26500064F85 /* DEMONavigationController.m */,
+				3032B8E51805A26500064F85 /* DEMONavigationController.h */,
+				3032B8A71805A10100064F85 /* DEMORootViewController.h */,
+				3032B8A81805A10100064F85 /* DEMORootViewController.m */,
+			);
+			name = "Menu View Controllers";
+			path = REFrostedViewControllerStoryboards;
+			sourceTree = "<group>";
+		};
+		75E36F1918636B0900300EF7 /* Order Process */ = {
+			isa = PBXGroup;
+			children = (
+				756FEA2618616B64004476D1 /* CurrentOrderViewController.h */,
+				756FEA2718616B64004476D1 /* CurrentOrderViewController.m */,
+				75E36F0F18636A1C00300EF7 /* OrderCheck.h */,
+				75E36F1018636A1C00300EF7 /* OrderCheck.m */,
+				75E36F0018633B7200300EF7 /* OrderSummaryAndPayment.h */,
+				75E36F0118633B7200300EF7 /* OrderSummaryAndPayment.m */,
+			);
+			name = "Order Process";
+			path = REFrostedViewControllerStoryboards;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -508,6 +546,8 @@
 				3032B9001805BC8E00064F85 /* RECommonFunctions.m in Sources */,
 				3032B8E31805A21600064F85 /* UIView+REFrostedViewController.m in Sources */,
 				3032B89F1805A10100064F85 /* main.m in Sources */,
+				75E36F1718636AAD00300EF7 /* LoginLogoutViewController.m in Sources */,
+				75E36F1418636A7F00300EF7 /* SettingsViewController.m in Sources */,
 				75E36F0218633B7200300EF7 /* OrderSummaryAndPayment.m in Sources */,
 				7516E83418538B6F00CA8D26 /* NSString+FontAwesome.m in Sources */,
 				3032B8A91805A10100064F85 /* DEMORootViewController.m in Sources */,
@@ -519,7 +559,9 @@
 				7516E83318538B6F00CA8D26 /* BButton.m in Sources */,
 				3032B8E41805A21600064F85 /* UIViewController+REFrostedViewController.m in Sources */,
 				3032B8E01805A21600064F85 /* REFrostedContainerViewController.m in Sources */,
+				75E36F1118636A1C00300EF7 /* OrderCheck.m in Sources */,
 				3032B8E71805A26500064F85 /* DEMONavigationController.m in Sources */,
+				75E36F0E186369B800300EF7 /* MessagesViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
