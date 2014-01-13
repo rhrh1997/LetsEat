@@ -78,7 +78,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		3032B88F1805A10100064F85 /* REFrostedViewControllerStoryboards.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = REFrostedViewControllerStoryboards.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3032B88F1805A10100064F85 /* Let's Eat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Let's Eat.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3032B8921805A10100064F85 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		3032B8941805A10100064F85 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		3032B8961805A10100064F85 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -220,7 +220,7 @@
 		3032B8901805A10100064F85 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				3032B88F1805A10100064F85 /* REFrostedViewControllerStoryboards.app */,
+				3032B88F1805A10100064F85 /* Let's Eat.app */,
 				3032B8B01805A10100064F85 /* REFrostedViewControllerStoryboardsTests.xctest */,
 			);
 			name = Products;
@@ -418,7 +418,7 @@
 			);
 			name = REFrostedViewControllerStoryboards;
 			productName = REFrostedViewControllerStoryboards;
-			productReference = 3032B88F1805A10100064F85 /* REFrostedViewControllerStoryboards.app */;
+			productReference = 3032B88F1805A10100064F85 /* Let's Eat.app */;
 			productType = "com.apple.product-type.application";
 		};
 		3032B8AF1805A10100064F85 /* REFrostedViewControllerStoryboardsTests */ = {
@@ -703,7 +703,7 @@
 				GCC_PREFIX_HEADER = "REFrostedViewControllerStoryboards/REFrostedViewControllerStoryboards-Prefix.pch";
 				INFOPLIST_FILE = "REFrostedViewControllerStoryboards/REFrostedViewControllerStoryboards-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Let's Eat";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALID_ARCHS = "armv7 armv7s";
 				WRAPPER_EXTENSION = app;
@@ -728,7 +728,7 @@
 				GCC_PREFIX_HEADER = "REFrostedViewControllerStoryboards/REFrostedViewControllerStoryboards-Prefix.pch";
 				INFOPLIST_FILE = "REFrostedViewControllerStoryboards/REFrostedViewControllerStoryboards-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Let's Eat";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALID_ARCHS = "armv7 armv7s";
 				WRAPPER_EXTENSION = app;

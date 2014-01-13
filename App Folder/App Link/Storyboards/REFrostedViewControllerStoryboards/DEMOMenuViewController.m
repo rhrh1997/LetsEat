@@ -6,6 +6,7 @@
 #import "DEMOHomeViewController.h"
 #import "DEMOSecondViewController.h"
 #import "UIViewController+REFrostedViewController.h"
+#import "LoginLogoutViewController.h"
 
 @interface DEMOMenuViewController ()
 
@@ -103,6 +104,10 @@
     if (indexPath.section == 0 && indexPath.row == 1){
         DEMOSecondViewController *secondViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"secondController"];
         navigationController.viewControllers = @[secondViewController];
+    }
+    if (indexPath.section == 1 && indexPath.row == 2){
+        DEMOSecondViewController *loginlogoutviewcontroller = [self.storyboard instantiateViewControllerWithIdentifier:@"LoginLogoutViewController"];
+        navigationController.viewControllers = @[loginlogoutviewcontroller];
     }
     
     [self.frostedViewController hideMenuViewController];
