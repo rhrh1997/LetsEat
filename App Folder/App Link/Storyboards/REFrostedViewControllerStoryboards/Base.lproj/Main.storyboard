@@ -802,12 +802,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AxL-7j-Qcl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1640" y="1676"/>
+            <point key="canvasLocation" x="1576" y="928"/>
         </scene>
-        <!--Login Logout View Controller-->
+        <!--Login Logout View Controller - Login-->
         <scene sceneID="HPr-b0-hve">
             <objects>
-                <viewController storyboardIdentifier="LoginLogoutViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="CnZ-dK-283" customClass="LoginLogoutViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LoginLogoutViewController" title="Login" useStoryboardIdentifierAsRestorationIdentifier="YES" id="CnZ-dK-283" customClass="LoginLogoutViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="DAq-T6-EGB"/>
                         <viewControllerLayoutGuide type="bottom" id="Xfu-VK-m5T"/>
@@ -877,7 +877,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="b89-mX-2a7">
+                    <navigationItem key="navigationItem" title="Login" id="b89-mX-2a7">
                         <barButtonItem key="leftBarButtonItem" image="menu.png" style="plain" id="YXw-gq-q0u">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="d1C-gm-pzK">
                                 <rect key="frame" x="16" y="12" width="28" height="20"/>
