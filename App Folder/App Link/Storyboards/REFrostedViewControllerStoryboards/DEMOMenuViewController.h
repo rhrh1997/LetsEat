@@ -6,5 +6,5 @@
 
 @interface DEMOMenuViewController : UITableViewController
 
-//hello
+
 @end
