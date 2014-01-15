@@ -5,16 +5,22 @@
 #import "DEMOAppDelegate.h"
 #import <Parse/Parse.h>
 #import <FlatUIKit.h>
+#import <QuartzCore/QuartzCore.h>
+
 
 @implementation DEMOAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    [self.window.layer setCornerRadius:5.0];
+    [self.window.layer setMasksToBounds:YES];
+    self.window.layer.opaque = NO;
     // Override point for customization after application launch.
     [Parse setApplicationId:@"pR8IQwCERjyLHsXVGRhODkATVXlzLMX9wNSDoLiO"
                   clientKey:@"ooIpVOm4FZ68KUpMC1G8xicMESfP8kqpy5tuxwze"];
     [PFAnalytics trackAppOpenedWithLaunchOptions:launchOptions];
     return YES;
+   
 
 }
 							
