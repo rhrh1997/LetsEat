@@ -80,7 +80,9 @@ extern NSString *const PFLogInCancelNotification;
  @param password the password the user tries to log in with.
  @result a boolean indicating whether the log in should proceed.
  */
-- (BOOL)logInViewController:(PFLogInViewController *)logInController shouldBeginLogInWithUsername:(NSString *)username password:(NSString *)password;
+
+
+
 
 /*! @name Responding to Actions */
 /// Sent to the delegate when a PFUser is logged in.
@@ -91,5 +93,7 @@ extern NSString *const PFLogInCancelNotification;
 
 /// Sent to the delegate when the log in screen is dismissed.
 - (void)logInViewControllerDidCancelLogIn:(PFLogInViewController *)logInController;
+
+
 @end
 
