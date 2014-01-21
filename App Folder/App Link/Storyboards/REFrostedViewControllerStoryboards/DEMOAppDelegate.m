@@ -19,8 +19,12 @@
     [Parse setApplicationId:@"pR8IQwCERjyLHsXVGRhODkATVXlzLMX9wNSDoLiO"
                   clientKey:@"ooIpVOm4FZ68KUpMC1G8xicMESfP8kqpy5tuxwze"];
     [PFAnalytics trackAppOpenedWithLaunchOptions:launchOptions];
+    
+    PFACL *defaultACL = [PFACL ACL];
+    [defaultACL setPublicReadAccess:YES];
+    [PFACL setDefaultACL:defaultACL withAccessForCurrentUser:YES];
     return YES;
-   
+    [PFUser logOut];
 
 }
 							
@@ -50,5 +54,7 @@
 {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
+
+
 
 @end

@@ -14,6 +14,9 @@
 
 @implementation LoginLogoutViewController
 
+
+
+
 - (IBAction)showMenu
 {
     [self.frostedViewController presentMenuViewController];
@@ -40,4 +43,12 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (IBAction)logOut:(id)sender {
+    [PFUser logOut];
+    [[[UIAlertView alloc] initWithTitle:@"Warning"
+                                message:@"You have been logged out, no notifications will be recieved!"
+                               delegate:nil
+                      cancelButtonTitle:@"ok"
+                      otherButtonTitles:nil] show];
+}
 @end

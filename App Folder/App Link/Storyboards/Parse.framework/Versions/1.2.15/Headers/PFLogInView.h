@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <FlatUIKit.h>
 
 typedef enum {
     PFLogInFieldsNone = 0,
@@ -50,22 +51,22 @@ typedef enum {
 @property (nonatomic, readonly, retain) UITextField *passwordField;
 
 /// The password forgotten button. It is nil if the element is not enabled.
-@property (nonatomic, readonly, retain) UIButton *passwordForgottenButton;
+@property (nonatomic, readonly, retain) FUIButton *passwordForgottenButton;
 
 /// The log in button. It is nil if the element is not enabled.
-@property (nonatomic, readonly, retain) UIButton *logInButton;
+@property (nonatomic, readonly, retain) FUIButton *logInButton;
 
 /// The Facebook button. It is nil if the element is not enabled.
-@property (nonatomic, readonly, retain) UIButton *facebookButton;
+@property (nonatomic, readonly, retain) FUIButton *facebookButton;
 
 /// The Twitter button. It is nil if the element is not enabled.
-@property (nonatomic, readonly, retain) UIButton *twitterButton;
+@property (nonatomic, readonly, retain) FUIButton *twitterButton;
 
 /// The sign up button. It is nil if the element is not enabled.
-@property (nonatomic, readonly, retain) UIButton *signUpButton;
+@property (nonatomic, readonly, retain) FUIButton *signUpButton;
 
 /// The dismiss button. It is nil if the element is not enabled.
-@property (nonatomic, readonly, retain) UIButton *dismissButton;
+@property (nonatomic, readonly, retain) FUIButton *dismissButton;
 
 /// The facebook/twitter login label. It is only shown if the external login is enabled.
 @property (nonatomic, readonly, retain) UILabel *externalLogInLabel;

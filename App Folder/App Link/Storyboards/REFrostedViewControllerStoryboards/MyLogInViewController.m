@@ -19,7 +19,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    [self.logInView setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"MainBG.png"]]];
+    [self.logInView setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"square_bg_@2X.png"]]];
     [self.logInView setLogo:[[UIImageView alloc] initWithImage:[UIImage imageNamed:@"Logo.png"]]];
     
     // Set buttons appearance
@@ -40,10 +40,10 @@
     [self.logInView.twitterButton setTitle:@"" forState:UIControlStateNormal];
     [self.logInView.twitterButton setTitle:@"" forState:UIControlStateHighlighted];
     
-    [self.logInView.signUpButton setBackgroundImage:[UIImage imageNamed:@"Signup.png"] forState:UIControlStateNormal];
+   [self.logInView.signUpButton setBackgroundImage:[UIImage imageNamed:@"Signup.png"] forState:UIControlStateNormal];
     [self.logInView.signUpButton setBackgroundImage:[UIImage imageNamed:@"SignupDown.png"] forState:UIControlStateHighlighted];
-    [self.logInView.signUpButton setTitle:@"" forState:UIControlStateNormal];
-    [self.logInView.signUpButton setTitle:@"" forState:UIControlStateHighlighted];
+    [self.logInView.signUpButton setTitle:@"Signup" forState:UIControlStateNormal];
+    [self.logInView.signUpButton setTitle:@"Signup" forState:UIControlStateHighlighted];
     
     // Add login field background
     fieldsBackground = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"LoginFieldBG.png"]];

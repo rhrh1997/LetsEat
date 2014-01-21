@@ -13,9 +13,8 @@
 #import "REFrostedViewController.h"
 
 @interface LoginLogoutViewController : UIViewController
-@property (strong, nonatomic) IBOutlet FUIButton *registerButton;
 @property (strong, nonatomic) IBOutlet FUIButton *loginButton;
-@property (strong, nonatomic) IBOutlet FUIButton *forgotButton;
+- (IBAction)logOut:(id)sender;
 
 - (IBAction)showMenu;
 
