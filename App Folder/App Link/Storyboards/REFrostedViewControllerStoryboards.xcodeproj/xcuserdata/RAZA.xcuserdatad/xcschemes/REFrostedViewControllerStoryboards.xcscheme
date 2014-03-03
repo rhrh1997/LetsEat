@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "3032B88E1805A10100064F85"
-               BuildableName = "REFrostedViewControllerStoryboards.app"
+               BuildableName = "Let&apos;s Eat.app"
                BlueprintName = "REFrostedViewControllerStoryboards"
                ReferencedContainer = "container:REFrostedViewControllerStoryboards.xcodeproj">
             </BuildableReference>
@@ -43,7 +43,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "3032B88E1805A10100064F85"
-            BuildableName = "REFrostedViewControllerStoryboards.app"
+            BuildableName = "Let&apos;s Eat.app"
             BlueprintName = "REFrostedViewControllerStoryboards"
             ReferencedContainer = "container:REFrostedViewControllerStoryboards.xcodeproj">
          </BuildableReference>
@@ -62,7 +62,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "3032B88E1805A10100064F85"
-            BuildableName = "REFrostedViewControllerStoryboards.app"
+            BuildableName = "Let&apos;s Eat.app"
             BlueprintName = "REFrostedViewControllerStoryboards"
             ReferencedContainer = "container:REFrostedViewControllerStoryboards.xcodeproj">
          </BuildableReference>
@@ -80,7 +80,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "3032B88E1805A10100064F85"
-            BuildableName = "REFrostedViewControllerStoryboards.app"
+            BuildableName = "Let&apos;s Eat.app"
             BlueprintName = "REFrostedViewControllerStoryboards"
             ReferencedContainer = "container:REFrostedViewControllerStoryboards.xcodeproj">
          </BuildableReference>

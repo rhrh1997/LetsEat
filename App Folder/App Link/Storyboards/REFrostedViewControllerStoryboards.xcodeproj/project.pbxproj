@@ -19,8 +19,6 @@
 		3032B8B21805A10100064F85 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3032B8B11805A10100064F85 /* XCTest.framework */; };
 		3032B8B31805A10100064F85 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3032B8921805A10100064F85 /* Foundation.framework */; };
 		3032B8B41805A10100064F85 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3032B8961805A10100064F85 /* UIKit.framework */; };
-		3032B8BC1805A10100064F85 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3032B8BA1805A10100064F85 /* InfoPlist.strings */; };
-		3032B8BE1805A10100064F85 /* REFrostedViewControllerStoryboardsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3032B8BD1805A10100064F85 /* REFrostedViewControllerStoryboardsTests.m */; };
 		3032B8CE1805A1BC00064F85 /* DEMOHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3032B8CD1805A1BC00064F85 /* DEMOHomeViewController.m */; };
 		3032B8D11805A1D200064F85 /* DEMOMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3032B8D01805A1D200064F85 /* DEMOMenuViewController.m */; };
 		3032B8E01805A21600064F85 /* REFrostedContainerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3032B8D71805A21600064F85 /* REFrostedContainerViewController.m */; };
@@ -34,10 +32,7 @@
 		3032B9001805BC8E00064F85 /* RECommonFunctions.m in Sources */ = {isa = PBXBuildFile; fileRef = 3032B8FF1805BC8E00064F85 /* RECommonFunctions.m */; };
 		5EA966B8E9304DB9BF81342F /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C106F8B4317A4D788877CA30 /* libPods.a */; };
 		7516E8281852B3E900CA8D26 /* REFrostedViewControllerExample-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7516E8271852B3E900CA8D26 /* REFrostedViewControllerExample-Info.plist */; };
-		7516E83318538B6F00CA8D26 /* BButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 7516E82C18538B6F00CA8D26 /* BButton.m */; };
-		7516E83418538B6F00CA8D26 /* NSString+FontAwesome.m in Sources */ = {isa = PBXBuildFile; fileRef = 7516E82E18538B6F00CA8D26 /* NSString+FontAwesome.m */; };
-		7516E83518538B6F00CA8D26 /* UIColor+BButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 7516E83018538B6F00CA8D26 /* UIColor+BButton.m */; };
-		7516E83618538B6F00CA8D26 /* FontAwesome.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7516E83218538B6F00CA8D26 /* FontAwesome.ttf */; };
+		75202ED218C50AE500F01443 /* SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 75202ED118C50AE500F01443 /* SearchViewController.m */; };
 		756FEA25185EC9AD004476D1 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75D90110182E8CE8009372AC /* Parse.framework */; };
 		756FEA2918616B64004476D1 /* CurrentOrderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 756FEA2718616B64004476D1 /* CurrentOrderViewController.m */; };
 		7594797C185BFE82005BC9ED /* Salmon Blur.JPG in Resources */ = {isa = PBXBuildFile; fileRef = 7594797B185BFE82005BC9ED /* Salmon Blur.JPG */; };
@@ -94,8 +89,6 @@
 		3032B8AA1805A10100064F85 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		3032B8B01805A10100064F85 /* REFrostedViewControllerStoryboardsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = REFrostedViewControllerStoryboardsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3032B8B11805A10100064F85 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
-		3032B8BB1805A10100064F85 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		3032B8BD1805A10100064F85 /* REFrostedViewControllerStoryboardsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = REFrostedViewControllerStoryboardsTests.m; sourceTree = "<group>"; };
 		3032B8CC1805A1BC00064F85 /* DEMOHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DEMOHomeViewController.h; sourceTree = "<group>"; };
 		3032B8CD1805A1BC00064F85 /* DEMOHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DEMOHomeViewController.m; sourceTree = "<group>"; };
 		3032B8CF1805A1D200064F85 /* DEMOMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DEMOMenuViewController.h; sourceTree = "<group>"; };
@@ -118,13 +111,8 @@
 		3032B8FE1805BC8E00064F85 /* RECommonFunctions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RECommonFunctions.h; sourceTree = "<group>"; };
 		3032B8FF1805BC8E00064F85 /* RECommonFunctions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RECommonFunctions.m; sourceTree = "<group>"; };
 		7516E8271852B3E900CA8D26 /* REFrostedViewControllerExample-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "REFrostedViewControllerExample-Info.plist"; sourceTree = "<group>"; };
-		7516E82B18538B6F00CA8D26 /* BButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BButton.h; sourceTree = "<group>"; };
-		7516E82C18538B6F00CA8D26 /* BButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BButton.m; sourceTree = "<group>"; };
-		7516E82D18538B6F00CA8D26 /* NSString+FontAwesome.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+FontAwesome.h"; sourceTree = "<group>"; };
-		7516E82E18538B6F00CA8D26 /* NSString+FontAwesome.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+FontAwesome.m"; sourceTree = "<group>"; };
-		7516E82F18538B6F00CA8D26 /* UIColor+BButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+BButton.h"; sourceTree = "<group>"; };
-		7516E83018538B6F00CA8D26 /* UIColor+BButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+BButton.m"; sourceTree = "<group>"; };
-		7516E83218538B6F00CA8D26 /* FontAwesome.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = FontAwesome.ttf; sourceTree = "<group>"; };
+		75202ED018C50AE500F01443 /* SearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchViewController.h; sourceTree = "<group>"; };
+		75202ED118C50AE500F01443 /* SearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchViewController.m; sourceTree = "<group>"; };
 		756FEA2618616B64004476D1 /* CurrentOrderViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CurrentOrderViewController.h; sourceTree = "<group>"; };
 		756FEA2718616B64004476D1 /* CurrentOrderViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CurrentOrderViewController.m; sourceTree = "<group>"; };
 		7594797B185BFE82005BC9ED /* Salmon Blur.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Salmon Blur.JPG"; sourceTree = "<group>"; };
@@ -209,11 +197,13 @@
 			isa = PBXGroup;
 			children = (
 				75C74DD91886F25C00D19FF2 /* .gitignore */,
+				3032B8A41805A10100064F85 /* Main.storyboard */,
 				75E36F1818636AC000300EF7 /* Menu View Controllers */,
 				75E36F1918636B0900300EF7 /* Order Process */,
 				3032B8FB1805AB4600064F85 /* Function Controllers */,
-				3032B8981805A10100064F85 /* REFrostedViewControllerStoryboards */,
-				3032B8B71805A10100064F85 /* REFrostedViewControllerStoryboardsTests */,
+				75202ED318C50E4E00F01443 /* Image Resources */,
+				3032B8991805A10100064F85 /* Supporting Files */,
+				3032B8981805A10100064F85 /* Delegate stuff */,
 				3032B8911805A10100064F85 /* Frameworks */,
 				3032B8901805A10100064F85 /* Products */,
 				B1895BAEF11649E0AE7343EE /* Pods.xcconfig */,
@@ -258,55 +248,30 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		3032B8981805A10100064F85 /* REFrostedViewControllerStoryboards */ = {
+		3032B8981805A10100064F85 /* Delegate stuff */ = {
 			isa = PBXGroup;
 			children = (
 				3032B8A11805A10100064F85 /* DEMOAppDelegate.h */,
 				3032B8A21805A10100064F85 /* DEMOAppDelegate.m */,
-				7516E82918538B6F00CA8D26 /* BButton */,
-				3032B8FC1805AB5600064F85 /* avatar@2x.jpg */,
-				75AA700D1831792C00F69D81 /* menu@2x.png */,
-				7594797B185BFE82005BC9ED /* Salmon Blur.JPG */,
-				75D9013518304D8D009372AC /* menu.png */,
-				75AA700B1831687500F69D81 /* Background 9.png */,
-				75D90137183083E4009372AC /* square_bg_@2X.png */,
-				3032B8A41805A10100064F85 /* Main.storyboard */,
-				3032B8AA1805A10100064F85 /* Images.xcassets */,
-				3032B8D51805A21600064F85 /* REFrostedViewController */,
-				3032B8991805A10100064F85 /* Supporting Files */,
 			);
+			name = "Delegate stuff";
 			path = REFrostedViewControllerStoryboards;
 			sourceTree = "<group>";
 		};
 		3032B8991805A10100064F85 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				3032B8D51805A21600064F85 /* Menu Controllers */,
 				7516E8271852B3E900CA8D26 /* REFrostedViewControllerExample-Info.plist */,
 				3032B89B1805A10100064F85 /* InfoPlist.strings */,
 				3032B89E1805A10100064F85 /* main.m */,
 				3032B8A01805A10100064F85 /* REFrostedViewControllerStoryboards-Prefix.pch */,
 			);
 			name = "Supporting Files";
+			path = REFrostedViewControllerStoryboards;
 			sourceTree = "<group>";
 		};
-		3032B8B71805A10100064F85 /* REFrostedViewControllerStoryboardsTests */ = {
-			isa = PBXGroup;
-			children = (
-				3032B8BD1805A10100064F85 /* REFrostedViewControllerStoryboardsTests.m */,
-				3032B8B81805A10100064F85 /* Supporting Files */,
-			);
-			path = REFrostedViewControllerStoryboardsTests;
-			sourceTree = "<group>";
-		};
-		3032B8B81805A10100064F85 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				3032B8BA1805A10100064F85 /* InfoPlist.strings */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		3032B8D51805A21600064F85 /* REFrostedViewController */ = {
+		3032B8D51805A21600064F85 /* Menu Controllers */ = {
 			isa = PBXGroup;
 			children = (
 				3032B8FE1805BC8E00064F85 /* RECommonFunctions.h */,
@@ -322,7 +287,7 @@
 				3032B8DE1805A21600064F85 /* UIViewController+REFrostedViewController.h */,
 				3032B8DF1805A21600064F85 /* UIViewController+REFrostedViewController.m */,
 			);
-			name = REFrostedViewController;
+			name = "Menu Controllers";
 			path = ../../../REFrostedViewController;
 			sourceTree = "<group>";
 		};
@@ -344,34 +309,19 @@
 			path = REFrostedViewControllerStoryboards;
 			sourceTree = "<group>";
 		};
-		7516E82918538B6F00CA8D26 /* BButton */ = {
+		75202ED318C50E4E00F01443 /* Image Resources */ = {
 			isa = PBXGroup;
 			children = (
-				7516E82A18538B6F00CA8D26 /* Classes */,
-				7516E83118538B6F00CA8D26 /* resources */,
+				3032B8AA1805A10100064F85 /* Images.xcassets */,
+				3032B8FC1805AB5600064F85 /* avatar@2x.jpg */,
+				75AA700D1831792C00F69D81 /* menu@2x.png */,
+				7594797B185BFE82005BC9ED /* Salmon Blur.JPG */,
+				75D9013518304D8D009372AC /* menu.png */,
+				75AA700B1831687500F69D81 /* Background 9.png */,
+				75D90137183083E4009372AC /* square_bg_@2X.png */,
 			);
-			path = BButton;
-			sourceTree = "<group>";
-		};
-		7516E82A18538B6F00CA8D26 /* Classes */ = {
-			isa = PBXGroup;
-			children = (
-				7516E82B18538B6F00CA8D26 /* BButton.h */,
-				7516E82C18538B6F00CA8D26 /* BButton.m */,
-				7516E82D18538B6F00CA8D26 /* NSString+FontAwesome.h */,
-				7516E82E18538B6F00CA8D26 /* NSString+FontAwesome.m */,
-				7516E82F18538B6F00CA8D26 /* UIColor+BButton.h */,
-				7516E83018538B6F00CA8D26 /* UIColor+BButton.m */,
-			);
-			path = Classes;
-			sourceTree = "<group>";
-		};
-		7516E83118538B6F00CA8D26 /* resources */ = {
-			isa = PBXGroup;
-			children = (
-				7516E83218538B6F00CA8D26 /* FontAwesome.ttf */,
-			);
-			path = resources;
+			name = "Image Resources";
+			path = REFrostedViewControllerStoryboards;
 			sourceTree = "<group>";
 		};
 		75E36F1818636AC000300EF7 /* Menu View Controllers */ = {
@@ -397,6 +347,8 @@
 				75E36F1018636A1C00300EF7 /* OrderCheck.m */,
 				75E36F0018633B7200300EF7 /* OrderSummaryAndPayment.h */,
 				75E36F0118633B7200300EF7 /* OrderSummaryAndPayment.m */,
+				75202ED018C50AE500F01443 /* SearchViewController.h */,
+				75202ED118C50AE500F01443 /* SearchViewController.m */,
 			);
 			name = "Order Process";
 			path = REFrostedViewControllerStoryboards;
@@ -482,7 +434,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				3032B8AB1805A10100064F85 /* Images.xcassets in Resources */,
-				7516E83618538B6F00CA8D26 /* FontAwesome.ttf in Resources */,
 				75D9013618304D8D009372AC /* menu.png in Resources */,
 				7594797C185BFE82005BC9ED /* Salmon Blur.JPG in Resources */,
 				75C74DDA1886F25C00D19FF2 /* .gitignore in Resources */,
@@ -500,7 +451,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3032B8BC1805A10100064F85 /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -546,26 +496,24 @@
 			files = (
 				3032B8CE1805A1BC00064F85 /* DEMOHomeViewController.m in Sources */,
 				3032B8E11805A21600064F85 /* REFrostedViewController.m in Sources */,
-				7516E83518538B6F00CA8D26 /* UIColor+BButton.m in Sources */,
 				3032B9001805BC8E00064F85 /* RECommonFunctions.m in Sources */,
 				3032B8E31805A21600064F85 /* UIView+REFrostedViewController.m in Sources */,
 				3032B89F1805A10100064F85 /* main.m in Sources */,
 				75E36F1718636AAD00300EF7 /* LoginLogoutViewController.m in Sources */,
 				75E36F1418636A7F00300EF7 /* SettingsViewController.m in Sources */,
 				75E36F0218633B7200300EF7 /* OrderSummaryAndPayment.m in Sources */,
-				7516E83418538B6F00CA8D26 /* NSString+FontAwesome.m in Sources */,
 				3032B8A91805A10100064F85 /* DEMORootViewController.m in Sources */,
 				3032B8EA1805A4BF00064F85 /* DEMOSecondViewController.m in Sources */,
 				756FEA2918616B64004476D1 /* CurrentOrderViewController.m in Sources */,
 				3032B8E21805A21600064F85 /* UIImage+REFrostedViewController.m in Sources */,
 				3032B8D11805A1D200064F85 /* DEMOMenuViewController.m in Sources */,
 				3032B8A31805A10100064F85 /* DEMOAppDelegate.m in Sources */,
-				7516E83318538B6F00CA8D26 /* BButton.m in Sources */,
 				3032B8E41805A21600064F85 /* UIViewController+REFrostedViewController.m in Sources */,
 				3032B8E01805A21600064F85 /* REFrostedContainerViewController.m in Sources */,
 				75E36F1118636A1C00300EF7 /* OrderCheck.m in Sources */,
 				3032B8E71805A26500064F85 /* DEMONavigationController.m in Sources */,
 				75E36F0E186369B800300EF7 /* MessagesViewController.m in Sources */,
+				75202ED218C50AE500F01443 /* SearchViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -573,7 +521,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3032B8BE1805A10100064F85 /* REFrostedViewControllerStoryboardsTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -602,14 +549,7 @@
 				3032B8A51805A10100064F85 /* Base */,
 			);
 			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		3032B8BA1805A10100064F85 /* InfoPlist.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				3032B8BB1805A10100064F85 /* en */,
-			);
-			name = InfoPlist.strings;
+			path = REFrostedViewControllerStoryboards;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

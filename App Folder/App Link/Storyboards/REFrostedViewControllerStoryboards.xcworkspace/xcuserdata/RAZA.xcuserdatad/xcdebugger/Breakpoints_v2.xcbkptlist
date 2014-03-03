@@ -212,17 +212,17 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "No"
+            shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "REFrostedViewControllerStoryboards/DEMOMenuViewController.m"
-            timestampString = "412028670.740102"
+            filePath = "REFrostedViewControllerStoryboards/DEMOAppDelegate.h"
+            timestampString = "415566640.587549"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "118"
-            endingLineNumber = "118"
-            landmarkName = "-tableView:didSelectRowAtIndexPath:"
-            landmarkType = "5">
+            startingLineNumber = "10"
+            endingLineNumber = "10"
+            landmarkName = "@interface DEMOAppDelegate"
+            landmarkType = "2">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

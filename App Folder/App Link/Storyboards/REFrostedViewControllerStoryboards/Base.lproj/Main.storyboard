@@ -72,7 +72,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zzD-df-7on" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="903" y="126"/>
+            <point key="canvasLocation" x="883" y="78"/>
         </scene>
         <!--Home View Controller-->
         <scene sceneID="4d1-Jz-tGk">
@@ -196,10 +196,10 @@
             </objects>
             <point key="canvasLocation" x="1494" y="174"/>
         </scene>
-        <!--View Controller - Search-->
+        <!--Search View Controller - Search-->
         <scene sceneID="ASP-Eb-EUE">
             <objects>
-                <viewController id="lUE-cs-QgA" sceneMemberID="viewController">
+                <viewController id="lUE-cs-QgA" customClass="SearchViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="pJZ-OK-61c"/>
                         <viewControllerLayoutGuide type="bottom" id="Rld-Ig-9tB"/>
@@ -248,7 +248,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oPR-S5-1nP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2110" y="-380"/>
+            <point key="canvasLocation" x="2254" y="-524"/>
         </scene>
         <!--View Controller - Placehold-->
         <scene sceneID="LW3-89-IwF">
@@ -332,7 +332,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pEj-DE-nIh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2396" y="-960"/>
+            <point key="canvasLocation" x="2848" y="-1204"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="XJu-wB-aDb">
@@ -347,7 +347,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1NW-8Q-4kU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2620" y="230"/>
+            <point key="canvasLocation" x="2800" y="138"/>
         </scene>
         <!--Current Order View Controller-->
         <scene sceneID="cCe-oB-QOQ">
@@ -423,7 +423,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LeZ-Lz-drE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3231" y="4"/>
+            <point key="canvasLocation" x="3391" y="108"/>
         </scene>
         <!--Order Check - Continue Order-->
         <scene sceneID="7PU-xG-n5O">
@@ -506,7 +506,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ups-DB-KyB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3212" y="958"/>
+            <point key="canvasLocation" x="3084" y="942"/>
         </scene>
         <!--View Controller - Stripe-->
         <scene sceneID="mBB-rJ-3lj">
@@ -524,7 +524,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bYi-rO-n2H" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3616" y="978"/>
+            <point key="canvasLocation" x="3536" y="906"/>
         </scene>
         <!--Order Summary And Payment - Order Summary-->
         <scene sceneID="Bmj-Ia-xof">
@@ -684,7 +684,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5la-pB-NuB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="666" y="978"/>
+            <point key="canvasLocation" x="318" y="878"/>
         </scene>
         <!--Second View Controller - Orders-->
         <scene sceneID="ajy-0O-wjT">
@@ -820,18 +820,6 @@
                                 <rect key="frame" x="0.0" y="0.0" width="326" height="568"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aYv-Yh-NU9">
-                                <rect key="frame" x="137" y="177" width="131" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jGw-s3-tVg">
-                                <rect key="frame" x="137" y="227" width="131" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
-                            </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uZt-5r-nTY" customClass="FUIButton">
                                 <rect key="frame" x="136" y="397" width="49" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -843,7 +831,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Check" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QWV-jg-0cx">
-                                <rect key="frame" x="75" y="72" width="184" height="52"/>
+                                <rect key="frame" x="68" y="74" width="184" height="52"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-UltraLight" family="Helvetica Neue" pointSize="27"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -940,7 +928,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="18s-sI-uCh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3564" y="-1103"/>
+            <point key="canvasLocation" x="3524" y="-1289"/>
         </scene>
         <!--View Controller - Menu- Items-->
         <scene sceneID="34Z-ZX-QO2">
@@ -980,7 +968,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YEj-cM-wmF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4065" y="-1119"/>
+            <point key="canvasLocation" x="4173" y="-1281"/>
         </scene>
     </scenes>
     <resources>
