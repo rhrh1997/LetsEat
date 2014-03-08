@@ -7,9 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <Parse/Parse.h>
 
 @interface SearchViewController : UIViewController
 
-
+@property (strong, nonatomic) IBOutlet UITableView *SearchResults;
 
 @end

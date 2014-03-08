@@ -87,36 +87,40 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Salmon Blur.JPG" translatesAutoresizingMaskIntoConstraints="NO" id="O2R-ia-P5j">
-                                <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="639"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <searchBar contentMode="redraw" fixedFrame="YES" searchBarStyle="minimal" placeholder="ie: 77429" backgroundImage="bluetint.png" translatesAutoresizingMaskIntoConstraints="NO" id="Yz5-k9-HW0">
-                                <rect key="frame" x="0.0" y="249" width="213" height="44"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OlV-Qa-Tpu">
+                                <rect key="frame" x="16" y="79" width="289" height="249"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <searchBar contentMode="redraw" fixedFrame="YES" searchBarStyle="prominent" placeholder="ie: 77429" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yz5-k9-HW0">
+                                <rect key="frame" x="16" y="202" width="257" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                <color key="barTintColor" red="0.74958147320000001" green="0.1477251409" blue="0.049252552169999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="barTintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <connections>
                                     <outlet property="delegate" destination="jsP-Dz-DYG" id="XEq-wa-hyI"/>
                                 </connections>
                             </searchBar>
-                            <searchBar contentMode="redraw" fixedFrame="YES" searchBarStyle="minimal" placeholder="ie: Pizza, Italian" backgroundImage="bluetint.png" translatesAutoresizingMaskIntoConstraints="NO" id="DW4-3b-3C8">
-                                <rect key="frame" x="0.0" y="159" width="320" height="44"/>
+                            <searchBar contentMode="redraw" fixedFrame="YES" searchBarStyle="prominent" placeholder="ie: Pizza, Italian" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DW4-3b-3C8">
+                                <rect key="frame" x="16" y="128" width="289" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                <color key="barTintColor" red="0.74958147320000001" green="0.1477251409" blue="0.049252552169999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="barTintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <connections>
                                     <outlet property="delegate" destination="jsP-Dz-DYG" id="MgN-Uj-TcA"/>
                                 </connections>
                             </searchBar>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="What are you feeling?" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bue-fS-yK8">
-                                <rect key="frame" x="11" y="135" width="318" height="24"/>
+                                <rect key="frame" x="16" y="104" width="318" height="24"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
                                 <color key="textColor" red="0.14041200970000001" green="0.76594387760000004" blue="0.16043816450000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Near where?" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5yL-Em-NAf">
-                                <rect key="frame" x="11" y="225" width="318" height="24"/>
+                                <rect key="frame" x="16" y="178" width="318" height="24"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="17"/>
                                 <color key="textColor" red="0.14041200970000001" green="0.76594387760000004" blue="0.16043816450000001" alpha="1" colorSpace="calibratedRGB"/>
@@ -132,18 +136,19 @@
                                 </connections>
                             </button>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="V7r-Nm-oIy" customClass="FUISegmentedControl">
-                                <rect key="frame" x="71" y="308" width="178" height="29"/>
+                                <rect key="frame" x="71" y="283" width="178" height="29"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <segments>
-                                    <segment title="5 Mi"/>
+                                    <segment title="20 Mi"/>
                                     <segment title="10 Mi"/>
                                     <segment title="15 Mi"/>
                                 </segments>
                             </segmentedControl>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yv6-2c-0XP" customClass="FUIButton">
-                                <rect key="frame" x="196" y="257" width="116" height="28"/>
+                                <rect key="frame" x="259" y="202" width="46" height="44"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Current Location"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                <state key="normal" title="➤"/>
                                 <connections>
                                     <action selector="curPress:" destination="jsP-Dz-DYG" eventType="touchUpInside" id="NAF-6L-Oxp"/>
                                 </connections>
@@ -170,6 +175,25 @@
                                     <segue destination="eLv-FM-bSe" kind="modal" id="4R0-VP-v4Y"/>
                                 </connections>
                             </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="THk-Bn-Zqe">
+                                <rect key="frame" x="16" y="246" width="289" height="48"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="vyr-AX-dgQ">
+                                        <rect key="frame" x="0.0" y="22" width="289" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="vyr-AX-dgQ" id="O5D-p2-8rg">
+                                            <rect key="frame" x="0.0" y="0.0" width="289" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="jsP-Dz-DYG" id="xgm-bV-PFQ"/>
+                                    <outlet property="delegate" destination="jsP-Dz-DYG" id="TI8-21-tRA"/>
+                                </connections>
+                            </tableView>
                         </subviews>
                     </view>
                     <navigationItem key="navigationItem" id="HIf-bS-REK">
@@ -186,6 +210,7 @@
                         <outlet property="curOrder" destination="Lnt-PE-GB5" id="3nG-dV-W2x"/>
                         <outlet property="mileage" destination="V7r-Nm-oIy" id="zyf-NQ-PHh"/>
                         <outlet property="nearSearch" destination="Yz5-k9-HW0" id="ATK-fw-Ycb"/>
+                        <outlet property="nearSuggest" destination="THk-Bn-Zqe" id="PDv-gG-2Se"/>
                         <outlet property="nearWhere" destination="5yL-Em-NAf" id="vpR-Y0-Z3w"/>
                         <outlet property="searchButton" destination="9lD-l7-9iL" id="lga-EB-0Ky"/>
                         <outlet property="whatEat" destination="Bue-fS-yK8" id="42i-1u-fTD"/>
@@ -194,7 +219,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Awc-v8-Z61" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1494" y="174"/>
+            <point key="canvasLocation" x="1666" y="-152"/>
         </scene>
         <!--Search View Controller - Search-->
         <scene sceneID="ASP-Eb-EUE">
@@ -212,32 +237,6 @@
                                 <rect key="frame" x="0.0" y="64" width="320" height="176"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             </mapView>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="71" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="dlC-fR-Al9">
-                                <rect key="frame" x="0.0" y="241" width="320" height="327"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="detailDisclosureButton" indentationWidth="27" rowHeight="71" id="H6E-SY-bSi">
-                                        <rect key="frame" x="0.0" y="22" width="320" height="71"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="H6E-SY-bSi" id="AJD-1x-5SK">
-                                            <rect key="frame" x="0.0" y="0.0" width="253" height="70"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Test 1" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gfO-ia-P9n">
-                                                    <rect key="frame" x="20" y="24" width="46" height="21"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                        </tableViewCellContentView>
-                                        <connections>
-                                            <segue destination="kZE-hL-UBt" kind="push" trigger="accessoryAction" id="kDE-2W-R9D"/>
-                                        </connections>
-                                    </tableViewCell>
-                                </prototypes>
-                            </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
@@ -248,7 +247,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oPR-S5-1nP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2254" y="-524"/>
+            <point key="canvasLocation" x="2340" y="-693"/>
         </scene>
         <!--View Controller - Placehold-->
         <scene sceneID="LW3-89-IwF">
@@ -705,7 +704,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SBM-yN-hYn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1676" y="-687"/>
+            <point key="canvasLocation" x="1684" y="-843"/>
         </scene>
         <!--Table View Controller - Messages-->
         <scene sceneID="cbK-Ns-Dj3">
@@ -830,8 +829,8 @@
                                     <action selector="logOut:" destination="CnZ-dK-283" eventType="touchUpInside" id="BZj-CP-mw9"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Check" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QWV-jg-0cx">
-                                <rect key="frame" x="68" y="74" width="184" height="52"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Logged In" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QWV-jg-0cx">
+                                <rect key="frame" x="68" y="74" width="185" height="52"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-UltraLight" family="Helvetica Neue" pointSize="27"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -974,7 +973,6 @@
     <resources>
         <image name="Balloon" width="320" height="568"/>
         <image name="Salmon Blur.JPG" width="1600" height="1067"/>
-        <image name="bluetint.png" width="8" height="8"/>
         <image name="close.png" width="29" height="29"/>
         <image name="menu.png" width="28" height="20"/>
     </resources>

@@ -7,6 +7,7 @@
 #import "REFrostedViewController.h"
 #import <FlatUIKit.h>
 #import <CoreLocation/CoreLocation.h>
+#import <Parse/Parse.h>
 
 
 @interface DEMOHomeViewController : UIViewController <UISearchBarDelegate>
@@ -21,6 +22,9 @@
 @property (strong, nonatomic) IBOutlet UIActivityIndicatorView *afterSearchload;
 @property (strong, nonatomic) IBOutlet UILabel *afterSearchlabel;
 @property (strong, nonatomic) IBOutlet FUIButton *curOrder;
+
+@property (nonatomic, strong) NSArray *places;
+@property (strong, nonatomic) IBOutlet UITableView *nearSuggest;
 
 - (IBAction)curOrdTouch:(id)sender;
 

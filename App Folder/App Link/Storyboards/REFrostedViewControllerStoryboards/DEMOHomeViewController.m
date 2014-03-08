@@ -4,6 +4,8 @@
 //
 
 #import "DEMOHomeViewController.h"
+#import <MapKit/MapKit.h>
+
 
 @interface DEMOHomeViewController ()
 
@@ -13,23 +15,21 @@
 
 @implementation DEMOHomeViewController
 
-CLLocationManager *locationManager;
+static NSString *kCellIdentifier = @"cellIdentifier";
 
-- (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar
-{
-    [searchBar resignFirstResponder];
-    // Do the search...
-}
+CLLocationManager *locationManager;
+CLLocationCoordinate2D userLocation;
 
 
 -(void)viewDidLoad
 {
-    
+    [self.navigationController setNavigationBarHidden:YES];
     //Current Order setup
+    self.nearSuggest.hidden = true;
     self.curOrder.buttonColor = [UIColor redColor];
     self.curOrder.shadowColor = [UIColor greenSeaColor];
     self.curOrder.shadowHeight = 0.0f;
-    self.curOrder.cornerRadius = 4.0f;
+    self.curOrder.cornerRadius = 0.0f;
     self.curOrder.titleLabel.font = [UIFont flatFontOfSize:16];
     [self.curOrder setTitleColor:[UIColor cloudsColor] forState:UIControlStateNormal];
     [self.curOrder setTitleColor:[UIColor cloudsColor] forState:UIControlStateHighlighted];
@@ -63,7 +63,7 @@ CLLocationManager *locationManager;
     self.searchButton.buttonColor = [UIColor emerlandColor];
     self.searchButton.shadowColor = [UIColor greenSeaColor];
     self.searchButton.shadowHeight = 0.0f;
-    self.searchButton.cornerRadius = 6.0f;
+    self.searchButton.cornerRadius = 0.0f;
     self.searchButton.titleLabel.font = [UIFont boldFlatFontOfSize:16];
     [self.searchButton setTitleColor:[UIColor cloudsColor] forState:UIControlStateNormal];
     [self.searchButton setTitleColor:[UIColor cloudsColor] forState:UIControlStateHighlighted];
@@ -72,8 +72,8 @@ CLLocationManager *locationManager;
     self.curLoc.buttonColor = [UIColor emerlandColor];
     self.curLoc.shadowColor = [UIColor greenSeaColor];
     self.curLoc.shadowHeight = 0.0f;
-    self.curLoc.cornerRadius = 6.0f;
-    self.curLoc.titleLabel.font = [UIFont boldFlatFontOfSize:9];
+    self.curLoc.cornerRadius = 0.0f;
+    self.curLoc.titleLabel.font = [UIFont boldFlatFontOfSize:20];
     [self.curLoc setTitleColor:[UIColor cloudsColor] forState:UIControlStateNormal];
     [self.curLoc setTitleColor:[UIColor cloudsColor] forState:UIControlStateHighlighted];
     
@@ -85,16 +85,19 @@ CLLocationManager *locationManager;
     
     UITextField *searchField = [self.whatSearch valueForKey:@"_searchField"];
     searchField.font = [UIFont flatFontOfSize:16];
-    searchField.textColor = [UIColor whiteColor];
+    searchField.textColor = [UIColor blackColor];
     
     UITextField *searchField1 = [self.nearSearch valueForKey:@"_searchField"];
-    searchField1.textColor = [UIColor whiteColor];
+    searchField1.textColor = [UIColor blackColor];
     searchField1.font = [UIFont flatFontOfSize:16];
 
     [self.mileage setSelectedFont:[UIFont flatFontOfSize:9]];
     [self.mileage setDeselectedFont:[UIFont flatFontOfSize:9]];
     [self.mileage setSelectedColor:[UIColor emerlandColor]];
-    [self.mileage setCornerRadius:10.0f];
+    self.mileage.cornerRadius = 10.0f;
+    //[self.mileage setFrame:CGRectMake(500, 100, 290, 550)];
+    //[self.mileage setCornerRadius:0.0f];
+    
     
     
     //This is to change the search button to a done button on search  keyboard
@@ -139,11 +142,14 @@ CLLocationManager *locationManager;
     UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc]
                                    initWithTarget:self
                                    action:@selector(dismissKeyboard)];
+
+    
     
     [self.view addGestureRecognizer:tap];
  
 
 }
+
 
 - (IBAction)curOrdTouch:(id)sender {
 }
@@ -160,6 +166,7 @@ CLLocationManager *locationManager;
 -(void)dismissKeyboard {
     [self.whatSearch resignFirstResponder];
     [self.nearSearch resignFirstResponder];
+    self.nearSuggest.hidden = true;
 }
 
 - (IBAction)showMenu
@@ -181,10 +188,97 @@ CLLocationManager *locationManager;
     NSArray  * search = [NSArray arrayWithObjects:what,where,mileage,nil];
     [self.afterSearchload stopAnimating];
     [self.afterSearchlabel setHidden:YES];
-
     
+    PFQuery *query = [PFQuery queryWithClassName:@"Restauraunt"];
+    
+}
+
+- (NSInteger)tableView:nearSuggest numberOfRowsInSection:(NSInteger)section
+{
+	return [self.places count];
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+	UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:kCellIdentifier forIndexPath:indexPath];
+    
+    MKMapItem *mapItem = [self.places objectAtIndex:indexPath.row];
+    cell.textLabel.text = mapItem.name;
+    
+	return cell;
+}
+
+- (void)tableView:nearSuggest didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    
+    
+    // pass the individual place to our map destination view controller
+    NSIndexPath *selectedItem = [nearSuggest indexPathForSelectedRow];
+  
+}
+
+- (void)searchBarTextDidEndEditing:nearSearch
+{
+    NSLog(@"End");
+    self.nearSuggest.hidden = true;
+}
+
+
+
+- (void)searchBarTextDidBeginEditing:(UISearchBar *)searchBar
+{
+    
+    
+    //
+    if (searchBar == self.nearSearch)
+    {
+        NSLog(@"SearchPresse");
+        NSString *causeStr = nil;
+        self.nearSuggest.hidden = false;
+        
+        // check whether location services are enabled on the device
+        
+        if ([CLLocationManager locationServicesEnabled] == NO)
+        {
+            causeStr = @"device";
+        }
+        // check the application’s explicit authorization status:
+        else if ([CLLocationManager authorizationStatus] == kCLAuthorizationStatusDenied)
+        {
+            causeStr = @"app";
+        }
+        else
+        {
+            // we are good to go, start the search
+            //[self startSearch:searchBar.text];
+        }
+        
+        if (causeStr != nil)
+        {
+            NSString *alertMessage = [NSString stringWithFormat:@"Youcurrently have location services disabled for this %@. Please refer to \"Settings\" app to turn on Location Services.", causeStr];
+            
+            UIAlertView *servicesDisabledAlert = [[UIAlertView alloc] initWithTitle:@"Location Services Disabled"
+                                                                            message:alertMessage
+                                                                           delegate:nil
+                                                                  cancelButtonTitle:@"OK"
+                                                                  otherButtonTitles:nil];
+            [servicesDisabledAlert show];
+            
+        }
+
+    }
+    else if (searchBar == self.whatSearch)
+    {
+        [self.nearSearch resignFirstResponder];
+        self.nearSuggest.hidden = true;
+    }
+    
+       // Do the search...
 
 }
+
+
+
 
 
 
