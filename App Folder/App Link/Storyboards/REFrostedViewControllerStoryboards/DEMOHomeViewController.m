@@ -5,6 +5,8 @@
 
 #import "DEMOHomeViewController.h"
 #import <MapKit/MapKit.h>
+#import "SPGooglePlacesAutocomplete.h"
+
 
 
 @interface DEMOHomeViewController ()
@@ -15,17 +17,19 @@
 
 @implementation DEMOHomeViewController
 
-static NSString *kCellIdentifier = @"cellIdentifier";
+
+static NSString *kCellIdentifier = @"SPGooglePlacesAutocompleteCell";
 
 CLLocationManager *locationManager;
 CLLocationCoordinate2D userLocation;
 
 
+
+
 -(void)viewDidLoad
 {
-    [self.navigationController setNavigationBarHidden:YES];
+    
     //Current Order setup
-    self.nearSuggest.hidden = true;
     self.curOrder.buttonColor = [UIColor redColor];
     self.curOrder.shadowColor = [UIColor greenSeaColor];
     self.curOrder.shadowHeight = 0.0f;
@@ -150,6 +154,18 @@ CLLocationCoordinate2D userLocation;
 
 }
 
+- (void)viewWillAppear:(BOOL)animated
+{
+    [self.navigationController setNavigationBarHidden:YES animated:animated];
+    [super viewWillAppear:animated];
+}
+
+- (void)viewWillDisappear:(BOOL)animated
+{
+    [self.navigationController setNavigationBarHidden:NO animated:animated];
+    [super viewWillDisappear:animated];
+}
+
 
 - (IBAction)curOrdTouch:(id)sender {
 }
@@ -166,7 +182,6 @@ CLLocationCoordinate2D userLocation;
 -(void)dismissKeyboard {
     [self.whatSearch resignFirstResponder];
     [self.nearSearch resignFirstResponder];
-    self.nearSuggest.hidden = true;
 }
 
 - (IBAction)showMenu
@@ -175,6 +190,8 @@ CLLocationCoordinate2D userLocation;
     [self.frostedViewController presentMenuViewController];
 }
 
+
+//this is when you press the button
 
 - (IBAction)pressed:(id)sender {
     //Search button
@@ -189,93 +206,137 @@ CLLocationCoordinate2D userLocation;
     [self.afterSearchload stopAnimating];
     [self.afterSearchlabel setHidden:YES];
     
-    PFQuery *query = [PFQuery queryWithClassName:@"Restauraunt"];
+    //PFQuery *query = [PFQuery queryWithClassName:@"Restauraunt"];
     
 }
 
-- (NSInteger)tableView:nearSuggest numberOfRowsInSection:(NSInteger)section
-{
-	return [self.places count];
-}
 
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
-{
-	UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:kCellIdentifier forIndexPath:indexPath];
-    
-    MKMapItem *mapItem = [self.places objectAtIndex:indexPath.row];
-    cell.textLabel.text = mapItem.name;
-    
-	return cell;
-}
 
-- (void)tableView:nearSuggest didSelectRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    
-    
-    // pass the individual place to our map destination view controller
-    NSIndexPath *selectedItem = [nearSuggest indexPathForSelectedRow];
-  
-}
 
-- (void)searchBarTextDidEndEditing:nearSearch
+//this is starting the suggestions stuff
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    NSLog(@"End");
-    self.nearSuggest.hidden = true;
+	NSLog(@"Check number of rows");
+    return [searchResultPlaces count];
 }
 
 
 
-- (void)searchBarTextDidBeginEditing:(UISearchBar *)searchBar
-{
-    
-    
-    //
-    if (searchBar == self.nearSearch)
-    {
-        NSLog(@"SearchPresse");
-        NSString *causeStr = nil;
-        self.nearSuggest.hidden = false;
-        
-        // check whether location services are enabled on the device
-        
-        if ([CLLocationManager locationServicesEnabled] == NO)
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    NSLog(@"Call 5");
+    SPGooglePlacesAutocompletePlace *place = [self placeAtIndexPath:indexPath];
+    [place resolveToPlacemark:^(CLPlacemark *placemark, NSString *addressString, NSError *error) {
+        if (error)
         {
-            causeStr = @"device";
+            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Could not map selected Place"
+                                  
+                                                            message:error.localizedDescription
+                                                           delegate:nil
+                                                  cancelButtonTitle:@"OK"
+                                                  otherButtonTitles:nil, nil];
+            [alert show];
         }
-        // check the application’s explicit authorization status:
-        else if ([CLLocationManager authorizationStatus] == kCLAuthorizationStatusDenied)
+        else if (placemark)
         {
-            causeStr = @"app";
+            [self.searchDisplayController.searchResultsTableView deselectRowAtIndexPath:indexPath animated:NO];
         }
-        else
-        {
-            // we are good to go, start the search
-            //[self startSearch:searchBar.text];
-        }
-        
-        if (causeStr != nil)
-        {
-            NSString *alertMessage = [NSString stringWithFormat:@"Youcurrently have location services disabled for this %@. Please refer to \"Settings\" app to turn on Location Services.", causeStr];
-            
-            UIAlertView *servicesDisabledAlert = [[UIAlertView alloc] initWithTitle:@"Location Services Disabled"
-                                                                            message:alertMessage
-                                                                           delegate:nil
-                                                                  cancelButtonTitle:@"OK"
-                                                                  otherButtonTitles:nil];
-            [servicesDisabledAlert show];
-            
-        }
+    }];
+}
 
-    }
-    else if (searchBar == self.whatSearch)
-    {
-        [self.nearSearch resignFirstResponder];
-        self.nearSuggest.hidden = true;
+
+- (SPGooglePlacesAutocompletePlace *)placeAtIndexPath:(NSIndexPath *)indexPath {
+    return searchResultPlaces[indexPath.row];
+}
+
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    NSLog(@"Call 5b");
+    static NSString *cellIdentifier = @"SPGooglePlacesAutocompleteCell";
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
+    if (!cell) {
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];
     }
     
-       // Do the search...
-
+    cell.textLabel.font = [UIFont flatFontOfSize:16];
+    cell.textLabel.text = [self placeAtIndexPath:indexPath].name;
+    return cell;
 }
+
+- (void)handleSearchForSearchString:(NSString *)searchString {
+    NSLog(@"Call 6");
+       searchQuery = [[SPGooglePlacesAutocompleteQuery alloc] initWithApiKey:@"AIzaSyAFsaDn7vyI8pS53zBgYRxu0HfRwYqH-9E"];
+    searchQuery.location = self.mapView.userLocation.coordinate;
+    searchQuery.input = searchString;
+    [searchQuery fetchPlaces:^(NSArray *places, NSError *error) {
+        if (error) {
+            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Could not fetch Places"
+                                                            message:error.localizedDescription
+                                                           delegate:nil
+                                                  cancelButtonTitle:@"OK"
+                                                  otherButtonTitles:nil, nil];
+            [alert show];
+        } else {
+            searchResultPlaces = places;
+            [self.searchDisplayController.searchResultsTableView reloadData];
+        }
+    }];
+    NSLog(@"Call 6a");
+}
+
+- (BOOL)searchDisplayController:(UISearchDisplayController *)controller shouldReloadTableForSearchString:(NSString *)searchString {
+    NSLog(@"Call 7");
+    [self handleSearchForSearchString:searchString];
+    
+    // Return YES to cause the search result table view to be reloaded.
+    return YES;
+}
+
+
+
+
+- (void)searchBar:(UISearchBar *)searchBar textDidChange:(NSString *)searchText {
+    if(searchBar == self.nearSearch)
+    {
+    NSLog(@"Call 8");
+   if (![searchBar isFirstResponder]) {
+        // User tapped the 'clear' button.
+        NSLog(@"Call 8a");
+        shouldBeginEditing = NO;
+        [self.searchDisplayController setActive:NO];
+    }
+    }
+}
+
+- (BOOL)searchBarShouldBeginEditing:(UISearchBar *)searchBar {
+   
+    //this is checking if it is the nearSearch bar beggining to be searched or the whatSearch
+    if(searchBar == self.nearSearch)
+   {
+    NSLog(@"Call 9a");
+    if (shouldBeginEditing) {
+        // Animate in the table view.
+        NSTimeInterval animationDuration = 0.3;
+        [UIView beginAnimations:nil context:NULL];
+        [UIView setAnimationDuration:animationDuration];
+        self.searchDisplayController.searchResultsTableView.alpha = 0.75;
+        [UIView commitAnimations];
+        
+        [self.searchDisplayController.searchBar setShowsCancelButton:NO animated:NO];
+    }
+    BOOL boolToReturn = shouldBeginEditing;
+    shouldBeginEditing = YES;
+    return boolToReturn;
+   }
+   else
+   {
+        //basically allowing the keyboard to come up
+        return true;
+   }
+}
+
+
 
 
 
