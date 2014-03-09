@@ -32,6 +32,7 @@
 		3032B9001805BC8E00064F85 /* RECommonFunctions.m in Sources */ = {isa = PBXBuildFile; fileRef = 3032B8FF1805BC8E00064F85 /* RECommonFunctions.m */; };
 		5EA966B8E9304DB9BF81342F /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C106F8B4317A4D788877CA30 /* libPods.a */; };
 		7390DF3318CCF3410057030B /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 7390DF3218CCF3410057030B /* libz.dylib */; };
+		7390DF3518CCF6950057030B /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 7390DF3418CCF6950057030B /* libsqlite3.dylib */; };
 		7516E8281852B3E900CA8D26 /* REFrostedViewControllerExample-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7516E8271852B3E900CA8D26 /* REFrostedViewControllerExample-Info.plist */; };
 		75202ED218C50AE500F01443 /* SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 75202ED118C50AE500F01443 /* SearchViewController.m */; };
 		756FEA25185EC9AD004476D1 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75D90110182E8CE8009372AC /* Parse.framework */; };
@@ -114,6 +115,7 @@
 		3032B8FE1805BC8E00064F85 /* RECommonFunctions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RECommonFunctions.h; sourceTree = "<group>"; };
 		3032B8FF1805BC8E00064F85 /* RECommonFunctions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RECommonFunctions.m; sourceTree = "<group>"; };
 		7390DF3218CCF3410057030B /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		7390DF3418CCF6950057030B /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
 		7516E8271852B3E900CA8D26 /* REFrostedViewControllerExample-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "REFrostedViewControllerExample-Info.plist"; sourceTree = "<group>"; };
 		75202ED018C50AE500F01443 /* SearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchViewController.h; sourceTree = "<group>"; };
 		75202ED118C50AE500F01443 /* SearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchViewController.m; sourceTree = "<group>"; };
@@ -170,6 +172,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7390DF3518CCF6950057030B /* libsqlite3.dylib in Frameworks */,
 				7390DF3318CCF3410057030B /* libz.dylib in Frameworks */,
 				75D900FE182E8C49009372AC /* CoreLocation.framework in Frameworks */,
 				75D90109182E8CB5009372AC /* CFNetwork.framework in Frameworks */,
@@ -235,6 +238,7 @@
 		3032B8911805A10100064F85 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				7390DF3418CCF6950057030B /* libsqlite3.dylib */,
 				7390DF3218CCF3410057030B /* libz.dylib */,
 				75D90129182F75A6009372AC /* Social.framework */,
 				75D90127182F75A1009372AC /* AdSupport.framework */,
