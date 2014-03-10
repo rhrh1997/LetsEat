@@ -31,6 +31,8 @@
 		3032B8FD1805AB5600064F85 /* avatar@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3032B8FC1805AB5600064F85 /* avatar@2x.jpg */; };
 		3032B9001805BC8E00064F85 /* RECommonFunctions.m in Sources */ = {isa = PBXBuildFile; fileRef = 3032B8FF1805BC8E00064F85 /* RECommonFunctions.m */; };
 		5EA966B8E9304DB9BF81342F /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C106F8B4317A4D788877CA30 /* libPods.a */; };
+		7390DF3318CCF3410057030B /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 7390DF3218CCF3410057030B /* libz.dylib */; };
+		7390DF3518CCF6950057030B /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 7390DF3418CCF6950057030B /* libsqlite3.dylib */; };
 		7516E8281852B3E900CA8D26 /* REFrostedViewControllerExample-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7516E8271852B3E900CA8D26 /* REFrostedViewControllerExample-Info.plist */; };
 		75202ED218C50AE500F01443 /* SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 75202ED118C50AE500F01443 /* SearchViewController.m */; };
 		756FEA25185EC9AD004476D1 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75D90110182E8CE8009372AC /* Parse.framework */; };
@@ -52,9 +54,7 @@
 		75D9010B182E8CBC009372AC /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75D9010A182E8CBC009372AC /* AudioToolbox.framework */; };
 		75D9010D182E8CD8009372AC /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75D9010C182E8CD8009372AC /* Security.framework */; };
 		75D9010F182E8CE2009372AC /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75D9010E182E8CE2009372AC /* MapKit.framework */; };
-		75D90113182E8E2A009372AC /* libz.1.1.3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 75D90112182E8E2A009372AC /* libz.1.1.3.dylib */; };
 		75D9011A182F74F8009372AC /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75D90119182F74F8009372AC /* FacebookSDK.framework */; };
-		75D90124182F7589009372AC /* libsqlite3.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 75D90123182F7589009372AC /* libsqlite3.0.dylib */; };
 		75D90126182F7598009372AC /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75D90125182F7598009372AC /* Accounts.framework */; };
 		75D90128182F75A1009372AC /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75D90127182F75A1009372AC /* AdSupport.framework */; };
 		75D9012A182F75A6009372AC /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75D90129182F75A6009372AC /* Social.framework */; };
@@ -114,6 +114,8 @@
 		3032B8FC1805AB5600064F85 /* avatar@2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "avatar@2x.jpg"; sourceTree = "<group>"; };
 		3032B8FE1805BC8E00064F85 /* RECommonFunctions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RECommonFunctions.h; sourceTree = "<group>"; };
 		3032B8FF1805BC8E00064F85 /* RECommonFunctions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RECommonFunctions.m; sourceTree = "<group>"; };
+		7390DF3218CCF3410057030B /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		7390DF3418CCF6950057030B /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
 		7516E8271852B3E900CA8D26 /* REFrostedViewControllerExample-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "REFrostedViewControllerExample-Info.plist"; sourceTree = "<group>"; };
 		75202ED018C50AE500F01443 /* SearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchViewController.h; sourceTree = "<group>"; };
 		75202ED118C50AE500F01443 /* SearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchViewController.m; sourceTree = "<group>"; };
@@ -170,22 +172,22 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7390DF3518CCF6950057030B /* libsqlite3.dylib in Frameworks */,
+				7390DF3318CCF3410057030B /* libz.dylib in Frameworks */,
+				75D900FE182E8C49009372AC /* CoreLocation.framework in Frameworks */,
+				75D90109182E8CB5009372AC /* CFNetwork.framework in Frameworks */,
+				75D9010B182E8CBC009372AC /* AudioToolbox.framework in Frameworks */,
 				756FEA25185EC9AD004476D1 /* Parse.framework in Frameworks */,
 				75D9012A182F75A6009372AC /* Social.framework in Frameworks */,
 				75D90128182F75A1009372AC /* AdSupport.framework in Frameworks */,
 				75D90126182F7598009372AC /* Accounts.framework in Frameworks */,
-				75D90124182F7589009372AC /* libsqlite3.0.dylib in Frameworks */,
 				75D9011A182F74F8009372AC /* FacebookSDK.framework in Frameworks */,
-				75D90113182E8E2A009372AC /* libz.1.1.3.dylib in Frameworks */,
 				75D9010F182E8CE2009372AC /* MapKit.framework in Frameworks */,
 				75D9010D182E8CD8009372AC /* Security.framework in Frameworks */,
-				75D9010B182E8CBC009372AC /* AudioToolbox.framework in Frameworks */,
-				75D90109182E8CB5009372AC /* CFNetwork.framework in Frameworks */,
 				75D90106182E8C83009372AC /* SystemConfiguration.framework in Frameworks */,
 				75D90104182E8C75009372AC /* QuartzCore.framework in Frameworks */,
 				75D90102182E8C6F009372AC /* MobileCoreServices.framework in Frameworks */,
 				75D90100182E8C68009372AC /* StoreKit.framework in Frameworks */,
-				75D900FE182E8C49009372AC /* CoreLocation.framework in Frameworks */,
 				3032B8951805A10100064F85 /* CoreGraphics.framework in Frameworks */,
 				3032B8971805A10100064F85 /* UIKit.framework in Frameworks */,
 				3032B8931805A10100064F85 /* Foundation.framework in Frameworks */,
@@ -211,13 +213,13 @@
 			children = (
 				75C74DD91886F25C00D19FF2 /* .gitignore */,
 				3032B8A41805A10100064F85 /* Main.storyboard */,
+				3032B8981805A10100064F85 /* Delegate stuff */,
 				75E36F1818636AC000300EF7 /* Menu View Controllers */,
 				7584ACCB18CAD35F0052E534 /* Google Suggestion Classes */,
 				75E36F1918636B0900300EF7 /* Order Process */,
 				3032B8FB1805AB4600064F85 /* Function Controllers */,
 				75202ED318C50E4E00F01443 /* Image Resources */,
 				3032B8991805A10100064F85 /* Supporting Files */,
-				3032B8981805A10100064F85 /* Delegate stuff */,
 				3032B8911805A10100064F85 /* Frameworks */,
 				3032B8901805A10100064F85 /* Products */,
 				B1895BAEF11649E0AE7343EE /* Pods.xcconfig */,
@@ -236,6 +238,8 @@
 		3032B8911805A10100064F85 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				7390DF3418CCF6950057030B /* libsqlite3.dylib */,
+				7390DF3218CCF3410057030B /* libz.dylib */,
 				75D90129182F75A6009372AC /* Social.framework */,
 				75D90127182F75A1009372AC /* AdSupport.framework */,
 				75D90125182F7598009372AC /* Accounts.framework */,
