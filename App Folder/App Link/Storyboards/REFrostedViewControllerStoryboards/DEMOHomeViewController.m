@@ -95,12 +95,6 @@ CLLocationCoordinate2D userLocation;
     searchField1.textColor = [UIColor blackColor];
     searchField1.font = [UIFont flatFontOfSize:16];
 
-    [self.mileage setSelectedFont:[UIFont flatFontOfSize:9]];
-    [self.mileage setDeselectedFont:[UIFont flatFontOfSize:9]];
-    [self.mileage setSelectedColor:[UIColor emerlandColor]];
-    self.mileage.cornerRadius = 10.0f;
-    //[self.mileage setFrame:CGRectMake(500, 100, 290, 550)];
-    //[self.mileage setCornerRadius:0.0f];
     
     
     

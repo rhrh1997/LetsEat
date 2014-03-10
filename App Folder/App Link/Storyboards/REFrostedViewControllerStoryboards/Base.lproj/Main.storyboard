@@ -126,15 +126,6 @@
                                     <segue destination="lUE-cs-QgA" kind="push" id="CuQ-w5-t4a"/>
                                 </connections>
                             </button>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="V7r-Nm-oIy" customClass="FUISegmentedControl">
-                                <rect key="frame" x="71" y="283" width="178" height="29"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <segments>
-                                    <segment title="20 Mi"/>
-                                    <segment title="10 Mi"/>
-                                    <segment title="15 Mi"/>
-                                </segments>
-                            </segmentedControl>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yv6-2c-0XP" customClass="FUIButton">
                                 <rect key="frame" x="259" y="126" width="46" height="44"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -189,7 +180,6 @@
                         <outlet property="afterSearchload" destination="Nx6-GT-ZmA" id="lrR-a3-A7i"/>
                         <outlet property="curLoc" destination="Yv6-2c-0XP" id="SHV-ev-uFW"/>
                         <outlet property="curOrder" destination="Lnt-PE-GB5" id="3nG-dV-W2x"/>
-                        <outlet property="mileage" destination="V7r-Nm-oIy" id="zyf-NQ-PHh"/>
                         <outlet property="nearSearch" destination="lhr-dR-vWf" id="VRY-SW-wU6"/>
                         <outlet property="nearWhere" destination="5yL-Em-NAf" id="3De-x3-1TK"/>
                         <outlet property="searchButton" destination="9lD-l7-9iL" id="lga-EB-0Ky"/>
