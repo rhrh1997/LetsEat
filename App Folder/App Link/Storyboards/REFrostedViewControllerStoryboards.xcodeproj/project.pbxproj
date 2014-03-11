@@ -35,9 +35,10 @@
 		7337050C18CE362900575A5D /* CMQDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7337050A18CE362900575A5D /* CMQDetailViewController.m */; };
 		7390DF3318CCF3410057030B /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 7390DF3218CCF3410057030B /* libz.dylib */; };
 		7390DF3518CCF6950057030B /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 7390DF3418CCF6950057030B /* libsqlite3.dylib */; };
+		739451EC18CF8CAA004784D3 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 739451EB18CF8CAA004784D3 /* Parse.framework */; };
+		739451EE18CF8E5A004784D3 /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 739451ED18CF8E5A004784D3 /* FacebookSDK.framework */; };
 		7516E8281852B3E900CA8D26 /* REFrostedViewControllerExample-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7516E8271852B3E900CA8D26 /* REFrostedViewControllerExample-Info.plist */; };
 		75202ED218C50AE500F01443 /* SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 75202ED118C50AE500F01443 /* SearchViewController.m */; };
-		756FEA25185EC9AD004476D1 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75D90110182E8CE8009372AC /* Parse.framework */; };
 		756FEA2918616B64004476D1 /* CurrentOrderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 756FEA2718616B64004476D1 /* CurrentOrderViewController.m */; };
 		7584ACE218CB984A0052E534 /* SPGooglePlacesAutocompletePlace.m in Sources */ = {isa = PBXBuildFile; fileRef = 7584ACDB18CB984A0052E534 /* SPGooglePlacesAutocompletePlace.m */; };
 		7584ACE318CB984A0052E534 /* SPGooglePlacesAutocompleteQuery.m in Sources */ = {isa = PBXBuildFile; fileRef = 7584ACDD18CB984A0052E534 /* SPGooglePlacesAutocompleteQuery.m */; };
@@ -56,7 +57,6 @@
 		75D9010B182E8CBC009372AC /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75D9010A182E8CBC009372AC /* AudioToolbox.framework */; };
 		75D9010D182E8CD8009372AC /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75D9010C182E8CD8009372AC /* Security.framework */; };
 		75D9010F182E8CE2009372AC /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75D9010E182E8CE2009372AC /* MapKit.framework */; };
-		75D9011A182F74F8009372AC /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75D90119182F74F8009372AC /* FacebookSDK.framework */; };
 		75D90126182F7598009372AC /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75D90125182F7598009372AC /* Accounts.framework */; };
 		75D90128182F75A1009372AC /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75D90127182F75A1009372AC /* AdSupport.framework */; };
 		75D9012A182F75A6009372AC /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75D90129182F75A6009372AC /* Social.framework */; };
@@ -122,6 +122,8 @@
 		7337050A18CE362900575A5D /* CMQDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CMQDetailViewController.m; sourceTree = "<group>"; };
 		7390DF3218CCF3410057030B /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		7390DF3418CCF6950057030B /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
+		739451EB18CF8CAA004784D3 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
+		739451ED18CF8E5A004784D3 /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FacebookSDK.framework; sourceTree = "<group>"; };
 		7516E8271852B3E900CA8D26 /* REFrostedViewControllerExample-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "REFrostedViewControllerExample-Info.plist"; sourceTree = "<group>"; };
 		75202ED018C50AE500F01443 /* SearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchViewController.h; sourceTree = "<group>"; };
 		75202ED118C50AE500F01443 /* SearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchViewController.m; sourceTree = "<group>"; };
@@ -149,9 +151,7 @@
 		75D9010A182E8CBC009372AC /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		75D9010C182E8CD8009372AC /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		75D9010E182E8CE2009372AC /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
-		75D90110182E8CE8009372AC /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
 		75D90112182E8E2A009372AC /* libz.1.1.3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.1.1.3.dylib; path = usr/lib/libz.1.1.3.dylib; sourceTree = SDKROOT; };
-		75D90119182F74F8009372AC /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FacebookSDK.framework; sourceTree = "<group>"; };
 		75D9011B182F7537009372AC /* FacebookSDKResources.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = FacebookSDKResources.bundle; sourceTree = "<group>"; };
 		75D90123182F7589009372AC /* libsqlite3.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.0.dylib; path = usr/lib/libsqlite3.0.dylib; sourceTree = SDKROOT; };
 		75D90125182F7598009372AC /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
@@ -179,20 +179,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				7390DF3518CCF6950057030B /* libsqlite3.dylib in Frameworks */,
+				739451EE18CF8E5A004784D3 /* FacebookSDK.framework in Frameworks */,
 				7390DF3318CCF3410057030B /* libz.dylib in Frameworks */,
 				75D900FE182E8C49009372AC /* CoreLocation.framework in Frameworks */,
 				75D90109182E8CB5009372AC /* CFNetwork.framework in Frameworks */,
 				75D9010B182E8CBC009372AC /* AudioToolbox.framework in Frameworks */,
-				756FEA25185EC9AD004476D1 /* Parse.framework in Frameworks */,
 				75D9012A182F75A6009372AC /* Social.framework in Frameworks */,
 				75D90128182F75A1009372AC /* AdSupport.framework in Frameworks */,
 				75D90126182F7598009372AC /* Accounts.framework in Frameworks */,
-				75D9011A182F74F8009372AC /* FacebookSDK.framework in Frameworks */,
 				75D9010F182E8CE2009372AC /* MapKit.framework in Frameworks */,
 				75D9010D182E8CD8009372AC /* Security.framework in Frameworks */,
 				75D90106182E8C83009372AC /* SystemConfiguration.framework in Frameworks */,
 				75D90104182E8C75009372AC /* QuartzCore.framework in Frameworks */,
 				75D90102182E8C6F009372AC /* MobileCoreServices.framework in Frameworks */,
+				739451EC18CF8CAA004784D3 /* Parse.framework in Frameworks */,
 				75D90100182E8C68009372AC /* StoreKit.framework in Frameworks */,
 				3032B8951805A10100064F85 /* CoreGraphics.framework in Frameworks */,
 				3032B8971805A10100064F85 /* UIKit.framework in Frameworks */,
@@ -245,6 +245,8 @@
 		3032B8911805A10100064F85 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				739451ED18CF8E5A004784D3 /* FacebookSDK.framework */,
+				739451EB18CF8CAA004784D3 /* Parse.framework */,
 				7390DF3418CCF6950057030B /* libsqlite3.dylib */,
 				7390DF3218CCF3410057030B /* libz.dylib */,
 				75D90129182F75A6009372AC /* Social.framework */,
@@ -252,9 +254,7 @@
 				75D90125182F7598009372AC /* Accounts.framework */,
 				75D90123182F7589009372AC /* libsqlite3.0.dylib */,
 				75D9011B182F7537009372AC /* FacebookSDKResources.bundle */,
-				75D90119182F74F8009372AC /* FacebookSDK.framework */,
 				75D90112182E8E2A009372AC /* libz.1.1.3.dylib */,
-				75D90110182E8CE8009372AC /* Parse.framework */,
 				75D9010E182E8CE2009372AC /* MapKit.framework */,
 				75D9010C182E8CD8009372AC /* Security.framework */,
 				75D9010A182E8CBC009372AC /* AudioToolbox.framework */,
@@ -651,7 +651,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
-				VALID_ARCHS = "armv7 armv7s";
+				VALID_ARCHS = "armv7 armv7s arm64";
 			};
 			name = Debug;
 		};
@@ -685,7 +685,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
-				VALID_ARCHS = "armv7 armv7s";
+				VALID_ARCHS = "armv7 armv7s arm64";
 			};
 			name = Release;
 		};
@@ -700,8 +700,13 @@
 					"$(DEVELOPER_FRAMEWORKS_DIR)",
 					"/Users/RAZA/Desktop/REFrostedViewController-master/Examples/Storyboards",
 					"/Users/RAZA/Documents/Developer/REFrostedViewController-master/Examples/Storyboards",
-					"/Users/drewdennistoun/Developer/LetsEat/App\\ Folder/App\\ Link/Storyboards",
-					"/Users/RAZA/Documents/Developer/LetsEat/App\\ Folder/App\\ Link/Storyboards",
+					/Users/drewdennistoun/Developer/LetsEat/App,
+					Folder/App,
+					Link/Storyboards,
+					/Users/RAZA/Documents/Developer/LetsEat/App,
+					Folder/App,
+					Link/Storyboards,
+					"$(PROJECT_DIR)",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "REFrostedViewControllerStoryboards/REFrostedViewControllerStoryboards-Prefix.pch";
@@ -709,7 +714,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "Let's Eat";
 				TARGETED_DEVICE_FAMILY = "1,2";
-				VALID_ARCHS = "armv7 armv7s";
+				VALID_ARCHS = "armv7 armv7s arm64";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -725,8 +730,13 @@
 					"$(DEVELOPER_FRAMEWORKS_DIR)",
 					"/Users/RAZA/Desktop/REFrostedViewController-master/Examples/Storyboards",
 					"/Users/RAZA/Documents/Developer/REFrostedViewController-master/Examples/Storyboards",
-					"/Users/drewdennistoun/Developer/LetsEat/App\\ Folder/App\\ Link/Storyboards",
-					"/Users/RAZA/Documents/Developer/LetsEat/App\\ Folder/App\\ Link/Storyboards",
+					/Users/drewdennistoun/Developer/LetsEat/App,
+					Folder/App,
+					Link/Storyboards,
+					/Users/RAZA/Documents/Developer/LetsEat/App,
+					Folder/App,
+					Link/Storyboards,
+					"$(PROJECT_DIR)",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "REFrostedViewControllerStoryboards/REFrostedViewControllerStoryboards-Prefix.pch";
@@ -734,7 +744,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "Let's Eat";
 				TARGETED_DEVICE_FAMILY = "1,2";
-				VALID_ARCHS = "armv7 armv7s";
+				VALID_ARCHS = "armv7 armv7s arm64";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
