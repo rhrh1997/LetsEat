@@ -208,11 +208,20 @@ CLLocationCoordinate2D userLocation;
 
 
 //this is starting the suggestions stuff
+#pragma mark -
+#pragma mark UITableViewDataSource
 
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
-{
-	NSLog(@"Check number of rows");
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    NSLog(@"Call 1");
     return [searchResultPlaces count];
+    
+    
+}
+
+- (SPGooglePlacesAutocompletePlace *)placeAtIndexPath:(NSIndexPath *)indexPath {
+    NSLog(@"Call 2");
+    return searchResultPlaces[indexPath.row];
+    
 }
 
 
@@ -222,27 +231,20 @@ CLLocationCoordinate2D userLocation;
     NSLog(@"Call 5");
     SPGooglePlacesAutocompletePlace *place = [self placeAtIndexPath:indexPath];
     [place resolveToPlacemark:^(CLPlacemark *placemark, NSString *addressString, NSError *error) {
-        if (error)
-        {
+        if (error) {
             UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Could not map selected Place"
-                                  
                                                             message:error.localizedDescription
                                                            delegate:nil
                                                   cancelButtonTitle:@"OK"
                                                   otherButtonTitles:nil, nil];
             [alert show];
-        }
-        else if (placemark)
+        } else if (placemark)
         {
             [self.searchDisplayController.searchResultsTableView deselectRowAtIndexPath:indexPath animated:NO];
         }
     }];
 }
 
-
-- (SPGooglePlacesAutocompletePlace *)placeAtIndexPath:(NSIndexPath *)indexPath {
-    return searchResultPlaces[indexPath.row];
-}
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {

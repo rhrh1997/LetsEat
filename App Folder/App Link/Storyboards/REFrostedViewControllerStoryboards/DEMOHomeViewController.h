@@ -14,7 +14,7 @@
 @class SPGooglePlacesAutocompleteQuery;
 
 
-@interface DEMOHomeViewController : UIViewController <UISearchBarDelegate, UITableViewDataSource, UITableViewDelegate, UISearchDisplayDelegate, UISearchBarDelegate> {
+@interface DEMOHomeViewController : UIViewController <UISearchBarDelegate, UITableViewDataSource, UITableViewDelegate, UISearchDisplayDelegate, UISearchBarDelegate>  {
 
     NSArray *searchResultPlaces;
     SPGooglePlacesAutocompleteQuery *searchQuery;
