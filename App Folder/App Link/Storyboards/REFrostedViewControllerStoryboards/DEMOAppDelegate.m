@@ -26,6 +26,7 @@
     return YES;
     [PFUser logOut];
 
+
 }
 							
 - (void)applicationWillResignActive:(UIApplication *)application

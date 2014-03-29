@@ -137,13 +137,13 @@ CLLocationCoordinate2D userLocation;
     }
     
         
-    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc]
-                                   initWithTarget:self
-                                   action:@selector(dismissKeyboard)];
-
-    
-    
-    [self.view addGestureRecognizer:tap];
+//    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc]
+//                                   initWithTarget:self
+//                                   action:@selector(dismissKeyboard)];
+//
+//    
+//    
+//    [self.view addGestureRecognizer:tap];
  
 
 }
@@ -213,10 +213,13 @@ CLLocationCoordinate2D userLocation;
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     NSLog(@"Call 1");
+    NSLog(@"%lu", (unsigned long)[searchResultPlaces count]);
     return [searchResultPlaces count];
     
     
 }
+
+
 
 - (SPGooglePlacesAutocompletePlace *)placeAtIndexPath:(NSIndexPath *)indexPath {
     NSLog(@"Call 2");
@@ -229,6 +232,7 @@ CLLocationCoordinate2D userLocation;
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     NSLog(@"Call 5");
+    
     SPGooglePlacesAutocompletePlace *place = [self placeAtIndexPath:indexPath];
     [place resolveToPlacemark:^(CLPlacemark *placemark, NSString *addressString, NSError *error) {
         if (error) {
@@ -243,6 +247,7 @@ CLLocationCoordinate2D userLocation;
             [self.searchDisplayController.searchResultsTableView deselectRowAtIndexPath:indexPath animated:NO];
         }
     }];
+    self.nearSearch.text = [self placeAtIndexPath:indexPath].name;
 }
 
 

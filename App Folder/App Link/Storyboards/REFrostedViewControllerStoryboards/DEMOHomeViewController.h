@@ -32,6 +32,7 @@
 @property (strong, nonatomic) IBOutlet UILabel *afterSearchlabel;
 @property (strong, nonatomic) IBOutlet FUIButton *curOrder;
 @property (strong, nonatomic) IBOutlet UISearchBar *nearSearch;
+//@property (nonatomic,strong) IBOutlet UITableView *tableView;
 
 @property (nonatomic, strong) NSArray *places;
 @property (strong, nonatomic) IBOutlet UITableView *nearSuggest;
