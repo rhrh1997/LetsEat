@@ -176,6 +176,7 @@ CLLocationCoordinate2D userLocation;
 -(void)dismissKeyboard {
     [self.whatSearch resignFirstResponder];
     [self.nearSearch resignFirstResponder];
+
 }
 
 - (IBAction)showMenu
@@ -192,11 +193,11 @@ CLLocationCoordinate2D userLocation;
     NSLog(@"Pressy Pressy");
     [self.afterSearchload startAnimating];
     [self.afterSearchlabel setHidden:NO];
-    NSString *what = self.whatSearch.text;
-    NSString *where = self.nearSearch.text;
+ //   NSString *what = self.whatSearch.text;
+  //  NSString *where = self.nearSearch.text;
     NSString *mileage = @"5";
     //self.mileage.selectedSegmentIndex;
-    NSArray  * search = [NSArray arrayWithObjects:what,where,mileage,nil];
+  //  NSArray  * search = [NSArray arrayWithObjects:what,where,mileage,nil];
     [self.afterSearchload stopAnimating];
     [self.afterSearchlabel setHidden:YES];
     
@@ -234,19 +235,10 @@ CLLocationCoordinate2D userLocation;
     NSLog(@"Call 5");
     
     SPGooglePlacesAutocompletePlace *place = [self placeAtIndexPath:indexPath];
-    [place resolveToPlacemark:^(CLPlacemark *placemark, NSString *addressString, NSError *error) {
-        if (error) {
-            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Could not map selected Place"
-                                                            message:error.localizedDescription
-                                                           delegate:nil
-                                                  cancelButtonTitle:@"OK"
-                                                  otherButtonTitles:nil, nil];
-            [alert show];
-        } else if (placemark)
-        {
-            [self.searchDisplayController.searchResultsTableView deselectRowAtIndexPath:indexPath animated:NO];
-        }
-    }];
+    [self.searchDisplayController.searchResultsTableView deselectRowAtIndexPath:indexPath animated:NO];
+    [self dismissSearchControllerWhileStayingActive];
+    shouldBeginEditing = NO;
+    [self dismissKeyboard];
     self.nearSearch.text = [self placeAtIndexPath:indexPath].name;
 }
 
@@ -308,6 +300,17 @@ CLLocationCoordinate2D userLocation;
         [self.searchDisplayController setActive:NO];
     }
     }
+}
+
+- (void)dismissSearchControllerWhileStayingActive {
+    // Animate out the table view.
+    NSTimeInterval animationDuration = 0.3;
+    [UIView beginAnimations:nil context:NULL];
+    [UIView setAnimationDuration:animationDuration];
+    self.searchDisplayController.searchResultsTableView.alpha = 0.0;
+    [UIView commitAnimations];
+    [self.searchDisplayController.searchBar setShowsCancelButton:NO animated:YES];
+    [self.searchDisplayController.searchBar resignFirstResponder];
 }
 
 - (BOOL)searchBarShouldBeginEditing:(UISearchBar *)searchBar {
