@@ -11,6 +11,8 @@
 
 @implementation CMQMasterViewController
 
+CLLocationManager *locationManager;
+CLLocationCoordinate2D userLocation;
  // Uncomment this for Universal Apps
  - (void)awakeFromNib
  {
@@ -31,6 +33,8 @@
         
         // The key of the PFObject to display in the label of the default cell style
         self.textKey = @"Name";
+        
+
         //stuff
         // Uncomment the following line to specify the key of a PFFile on the PFObject to display in the imageView of the default cell style
         // self.imageKey = @"image";
@@ -47,17 +51,47 @@
     return self;
 }
 
+-(PFQuery *)queryForTable
+{
+    CLLocation *location = locationManager.location;
+    CLLocationCoordinate2D coordinate = [location coordinate];
+    NSLog (@"%f", coordinate.latitude );
+    PFGeoPoint *geoPoint = [PFGeoPoint geoPointWithLatitude:coordinate.latitude
+                                                  longitude:coordinate.longitude];
+    PFQuery *query = [PFQuery queryWithClassName:self.parseClassName];
+    [query whereKey:@"Location" nearGeoPoint:geoPoint];
+   //[query whereKey:@"Delivers" equalTo:[NSNumber numberWithBool:YES]];
+    //self.
+    query.limit = 10;
+    return query;
+}
+
 - (void)didReceiveMemoryWarning {
     // Releases the view if it doesn't have a superview.
     [super didReceiveMemoryWarning];
     
     // Release any cached data, images, etc that aren't in use.
 }
-
+- (CLLocationManager *)locationManager {
+    if (locationManager != nil) {
+        return locationManager;
+    }
+    
+    locationManager = [[CLLocationManager alloc] init];
+    [locationManager setDesiredAccuracy:kCLLocationAccuracyNearestTenMeters];
+    [locationManager setDelegate:self];
+    [locationManager setPurpose:@"Your current location is used to find the nearest restauraunts."];
+    
+    return locationManager;
+}
 
 #pragma mark - UIViewController
 
 - (void)viewDidLoad {
+    locationManager = [[CLLocationManager alloc] init];
+    locationManager.distanceFilter = kCLDistanceFilterNone; // whenever we move
+    locationManager.desiredAccuracy = kCLLocationAccuracyHundredMeters; // 100 m
+    [locationManager startUpdatingLocation];
     [super viewDidLoad];
     
     // Uncomment the following line for Universal Apps
@@ -100,6 +134,9 @@
 
 
 #pragma mark - PFQueryTableViewController
+
+
+
 
 - (void)objectsWillLoad {
     [super objectsWillLoad];

@@ -67,6 +67,7 @@
 		75E36F1118636A1C00300EF7 /* OrderCheck.m in Sources */ = {isa = PBXBuildFile; fileRef = 75E36F1018636A1C00300EF7 /* OrderCheck.m */; };
 		75E36F1418636A7F00300EF7 /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 75E36F1318636A7F00300EF7 /* SettingsViewController.m */; };
 		75E36F1718636AAD00300EF7 /* LoginLogoutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 75E36F1618636AAD00300EF7 /* LoginLogoutViewController.m */; };
+		75E3C65C18EF389400D59C6D /* Pizza.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 75E3C65B18EF389400D59C6D /* Pizza.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -169,6 +170,7 @@
 		75E36F1318636A7F00300EF7 /* SettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsViewController.m; sourceTree = "<group>"; };
 		75E36F1518636AAD00300EF7 /* LoginLogoutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginLogoutViewController.h; sourceTree = "<group>"; };
 		75E36F1618636AAD00300EF7 /* LoginLogoutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginLogoutViewController.m; sourceTree = "<group>"; };
+		75E3C65B18EF389400D59C6D /* Pizza.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Pizza.jpg; sourceTree = "<group>"; };
 		B1895BAEF11649E0AE7343EE /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 		C106F8B4317A4D788877CA30 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -349,6 +351,7 @@
 		75202ED318C50E4E00F01443 /* Image Resources */ = {
 			isa = PBXGroup;
 			children = (
+				75E3C65B18EF389400D59C6D /* Pizza.jpg */,
 				3032B8AA1805A10100064F85 /* Images.xcassets */,
 				3032B8FC1805AB5600064F85 /* avatar@2x.jpg */,
 				75AA700D1831792C00F69D81 /* menu@2x.png */,
@@ -493,6 +496,7 @@
 				75C74DDA1886F25C00D19FF2 /* .gitignore in Resources */,
 				75D90138183083E4009372AC /* square_bg_@2X.png in Resources */,
 				3032B8FD1805AB5600064F85 /* avatar@2x.jpg in Resources */,
+				75E3C65C18EF389400D59C6D /* Pizza.jpg in Resources */,
 				7516E8281852B3E900CA8D26 /* REFrostedViewControllerExample-Info.plist in Resources */,
 				3032B89D1805A10100064F85 /* InfoPlist.strings in Resources */,
 				75AA700E1831792C00F69D81 /* menu@2x.png in Resources */,

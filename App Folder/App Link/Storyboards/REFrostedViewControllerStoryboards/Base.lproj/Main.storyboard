@@ -86,16 +86,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Salmon Blur.JPG" translatesAutoresizingMaskIntoConstraints="NO" id="O2R-ia-P5j">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Pizza.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="O2R-ia-P5j">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="639"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OlV-Qa-Tpu">
-                                <rect key="frame" x="16" y="79" width="289" height="249"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
                             <searchBar contentMode="redraw" fixedFrame="YES" searchBarStyle="prominent" placeholder="ie: Pizza, Italian" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DW4-3b-3C8">
-                                <rect key="frame" x="18" y="202" width="289" height="44"/>
+                                <rect key="frame" x="18" y="181" width="289" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <color key="barTintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -104,21 +100,21 @@
                                 </connections>
                             </searchBar>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="What are you feeling?" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bue-fS-yK8">
-                                <rect key="frame" x="16" y="178" width="318" height="24"/>
+                                <rect key="frame" x="16" y="157" width="318" height="24"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
                                 <color key="textColor" red="0.14041200970000001" green="0.76594387760000004" blue="0.16043816450000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Near where?" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5yL-Em-NAf">
-                                <rect key="frame" x="16" y="102" width="318" height="24"/>
+                                <rect key="frame" x="16" y="81" width="318" height="24"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="17"/>
                                 <color key="textColor" red="0.14041200970000001" green="0.76594387760000004" blue="0.16043816450000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9lD-l7-9iL" customClass="FUIButton">
-                                <rect key="frame" x="112" y="361" width="96" height="29"/>
+                                <rect key="frame" x="112" y="277" width="96" height="29"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Search"/>
                                 <connections>
@@ -127,7 +123,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yv6-2c-0XP" customClass="FUIButton">
-                                <rect key="frame" x="259" y="126" width="46" height="44"/>
+                                <rect key="frame" x="259" y="105" width="46" height="44"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="32"/>
                                 <state key="normal" title="➤"/>
@@ -135,17 +131,6 @@
                                     <action selector="curPress:" destination="jsP-Dz-DYG" eventType="touchUpInside" id="NAF-6L-Oxp"/>
                                 </connections>
                             </button>
-                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" hidesWhenStopped="YES" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="Nx6-GT-ZmA">
-                                <rect key="frame" x="142" y="415" width="37" height="37"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </activityIndicatorView>
-                            <label hidden="YES" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Please Wait" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qM1-cY-FY9">
-                                <rect key="frame" x="112" y="460" width="96" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lnt-PE-GB5" customClass="FUIButton">
                                 <rect key="frame" x="91" y="543" width="138" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -158,7 +143,7 @@
                                 </connections>
                             </button>
                             <searchBar contentMode="redraw" fixedFrame="YES" searchBarStyle="prominent" translatesAutoresizingMaskIntoConstraints="NO" id="lhr-dR-vWf">
-                                <rect key="frame" x="16" y="126" width="243" height="44"/>
+                                <rect key="frame" x="16" y="105" width="243" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <color key="barTintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -166,6 +151,30 @@
                                     <outlet property="delegate" destination="jsP-Dz-DYG" id="joq-xW-HBv"/>
                                 </connections>
                             </searchBar>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AC6-Bv-kgx" customClass="FUIButton">
+                                <rect key="frame" x="20" y="470" width="105" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Past Orders">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Aad-pv-mWg" customClass="FUIButton">
+                                <rect key="frame" x="195" y="470" width="105" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Favorites">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4KH-Qm-kId" customClass="FUIButton">
+                                <rect key="frame" x="-30" y="37" width="74" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="31"/>
+                                <inset key="contentEdgeInsets" minX="0.0" minY="0.0" maxX="14" maxY="0.0"/>
+                                <state key="normal" title="⚙ ">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
                         </subviews>
                     </view>
                     <navigationItem key="navigationItem" id="HIf-bS-REK">
@@ -175,13 +184,15 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <nil key="simulatedTopBarMetrics"/>
                     <connections>
-                        <outlet property="afterSearchlabel" destination="qM1-cY-FY9" id="vHc-ct-hKc"/>
-                        <outlet property="afterSearchload" destination="Nx6-GT-ZmA" id="lrR-a3-A7i"/>
+                        <outlet property="accountSettings" destination="4KH-Qm-kId" id="pl6-lu-8EI"/>
                         <outlet property="curLoc" destination="Yv6-2c-0XP" id="SHV-ev-uFW"/>
                         <outlet property="curOrder" destination="Lnt-PE-GB5" id="3nG-dV-W2x"/>
+                        <outlet property="favorites" destination="Aad-pv-mWg" id="9nm-CV-1ek"/>
                         <outlet property="nearSearch" destination="lhr-dR-vWf" id="VRY-SW-wU6"/>
                         <outlet property="nearWhere" destination="5yL-Em-NAf" id="3De-x3-1TK"/>
+                        <outlet property="pastOrders" destination="AC6-Bv-kgx" id="M6O-cG-T3A"/>
                         <outlet property="searchButton" destination="9lD-l7-9iL" id="lga-EB-0Ky"/>
                         <outlet property="searchDisplayController" destination="hXB-jO-HzS" id="gcx-tb-a2G"/>
                         <outlet property="whatEat" destination="Bue-fS-yK8" id="42i-1u-fTD"/>
@@ -260,7 +271,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="vOu-7K-3KH">
-                                <rect key="frame" x="0.0" y="86" width="320" height="44"/>
+                                <rect key="frame" x="0.0" y="22" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="vOu-7K-3KH" id="akZ-Ch-V3Y">
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
@@ -277,12 +288,12 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eX0-oq-mzW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2344" y="-459"/>
+            <point key="canvasLocation" x="2432" y="-451"/>
         </scene>
-        <!--View Controller - Placehold-->
+        <!--Detail View Controller - Placehold-->
         <scene sceneID="LW3-89-IwF">
             <objects>
-                <viewController id="kZE-hL-UBt" sceneMemberID="viewController">
+                <viewController id="kZE-hL-UBt" customClass="CMQDetailViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="zR8-6Z-GkO"/>
                         <viewControllerLayoutGuide type="bottom" id="xe8-vZ-9uc"/>
@@ -361,7 +372,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pEj-DE-nIh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2800" y="-1264"/>
+            <point key="canvasLocation" x="2824" y="-1329"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="XJu-wB-aDb">
@@ -1002,7 +1013,7 @@
     </scenes>
     <resources>
         <image name="Balloon" width="320" height="568"/>
-        <image name="Salmon Blur.JPG" width="1600" height="1067"/>
+        <image name="Pizza.jpg" width="1920" height="1200"/>
         <image name="close.png" width="29" height="29"/>
         <image name="menu.png" width="28" height="20"/>
     </resources>

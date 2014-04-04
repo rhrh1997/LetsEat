@@ -8,10 +8,12 @@
 
 #import <UIKit/UIKit.h>
 #import <Parse/Parse.h>
+#include <CoreLocation/CoreLocation.h>
+
 
 @class CMQDetailViewController;
 
-@interface CMQMasterViewController : PFQueryTableViewController
+@interface CMQMasterViewController : PFQueryTableViewController <CLLocationManagerDelegate>
 
 @property (strong, nonatomic) CMQDetailViewController *detailViewController;
 

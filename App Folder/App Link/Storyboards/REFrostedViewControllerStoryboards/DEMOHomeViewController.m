@@ -6,6 +6,7 @@
 #import "DEMOHomeViewController.h"
 #import <MapKit/MapKit.h>
 #import "SPGooglePlacesAutocomplete.h"
+#import "CMQMasterViewController.h"
 
 
 
@@ -40,8 +41,7 @@ CLLocationCoordinate2D userLocation;
     
     
     //Loading set stop
-    [self.afterSearchload stopAnimating];
-    self.afterSearchlabel.font= [UIFont boldFlatFontOfSize:16];
+    //DELETED
     
     //Initiating location manager
     locationManager = [[CLLocationManager alloc] init];
@@ -77,9 +77,37 @@ CLLocationCoordinate2D userLocation;
     self.curLoc.shadowColor = [UIColor greenSeaColor];
     self.curLoc.shadowHeight = 0.0f;
     self.curLoc.cornerRadius = 0.0f;
-    self.curLoc.titleLabel.font = [UIFont boldFlatFontOfSize:20];
+    self.curLoc.titleLabel.font = [UIFont boldFlatFontOfSize:16];
     [self.curLoc setTitleColor:[UIColor cloudsColor] forState:UIControlStateNormal];
     [self.curLoc setTitleColor:[UIColor cloudsColor] forState:UIControlStateHighlighted];
+    
+    //PastOrders Location button
+    self.pastOrders.buttonColor = [UIColor sunflowerColor];
+    self.pastOrders.shadowColor = [UIColor greenSeaColor];
+    self.pastOrders.shadowHeight = 0.0f;
+    self.pastOrders.cornerRadius = 0.0f;
+    self.pastOrders.titleLabel.font = [UIFont boldFlatFontOfSize:16];
+    [self.pastOrders setTitleColor:[UIColor cloudsColor] forState:UIControlStateNormal];
+    [self.pastOrders setTitleColor:[UIColor cloudsColor] forState:UIControlStateHighlighted];
+    
+    //Favorites Location button
+    self.favorites.buttonColor = [UIColor sunflowerColor];
+    self.favorites.shadowColor = [UIColor greenSeaColor];
+    self.favorites.shadowHeight = 0.0f;
+    self.favorites.cornerRadius = 0.0f;
+    self.favorites.titleLabel.font = [UIFont boldFlatFontOfSize:16];
+    [self.favorites setTitleColor:[UIColor cloudsColor] forState:UIControlStateNormal];
+    [self.favorites setTitleColor:[UIColor cloudsColor] forState:UIControlStateHighlighted];
+    
+    
+    //AccountSettings Location button
+    self.accountSettings.buttonColor = [UIColor pomegranateColor];
+    self.accountSettings.shadowColor = [UIColor greenSeaColor];
+    self.accountSettings.shadowHeight = 0.0f;
+    self.accountSettings.cornerRadius = 9.0f;
+    self.accountSettings.titleLabel.font = [UIFont boldFlatFontOfSize:20];
+    [self.accountSettings setTitleColor:[UIColor cloudsColor] forState:UIControlStateNormal];
+    [self.accountSettings setTitleColor:[UIColor cloudsColor] forState:UIControlStateHighlighted];
     
     //searchfields
     
@@ -137,13 +165,13 @@ CLLocationCoordinate2D userLocation;
     }
     
         
-//    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc]
-//                                   initWithTarget:self
-//                                   action:@selector(dismissKeyboard)];
-//
-//    
-//    
-//    [self.view addGestureRecognizer:tap];
+    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc]
+                                   initWithTarget:self
+                                   action:@selector(dismissKeyboard)];
+
+    
+    
+    [self.view addGestureRecognizer:tap];
  
 
 }
@@ -169,6 +197,7 @@ CLLocationCoordinate2D userLocation;
     //Current Location Button press
     NSLog(@"Pressed curLocs");
     NSString *curLocs =[NSString stringWithFormat:@"latitude: %f longitude: %f", locationManager.location.coordinate.latitude, locationManager.location.coordinate.longitude];
+    self.reference = locationManager.location;
     self.nearSearch.text= curLocs;
     NSLog(@"%@", curLocs);
 
@@ -191,16 +220,12 @@ CLLocationCoordinate2D userLocation;
 - (IBAction)pressed:(id)sender {
     //Search button
     NSLog(@"Pressy Pressy");
-    [self.afterSearchload startAnimating];
-    [self.afterSearchlabel setHidden:NO];
+   
  //   NSString *what = self.whatSearch.text;
   //  NSString *where = self.nearSearch.text;
-    NSString *mileage = @"5";
+ //   NSString *mileage = @"5";
     //self.mileage.selectedSegmentIndex;
   //  NSArray  * search = [NSArray arrayWithObjects:what,where,mileage,nil];
-    [self.afterSearchload stopAnimating];
-    [self.afterSearchlabel setHidden:YES];
-    
     //PFQuery *query = [PFQuery queryWithClassName:@"Restauraunt"];
     
 }
@@ -211,6 +236,22 @@ CLLocationCoordinate2D userLocation;
 //this is starting the suggestions stuff
 #pragma mark -
 #pragma mark UITableViewDataSource
+
+- (CLGeocoder *)geocoder {
+    if (!geocoder) {
+        geocoder = [[CLGeocoder alloc] init];
+    }
+    return geocoder;
+}
+
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if([segue.identifier isEqualToString:@"CMQMasterViewController"])
+    {
+        CMQMasterViewController *controller = (CMQMasterViewController *)segue.destinationViewController;
+        
+    }
+}
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     NSLog(@"Call 1");
@@ -236,10 +277,27 @@ CLLocationCoordinate2D userLocation;
     
     SPGooglePlacesAutocompletePlace *place = [self placeAtIndexPath:indexPath];
     [self.searchDisplayController.searchResultsTableView deselectRowAtIndexPath:indexPath animated:NO];
-    [self dismissSearchControllerWhileStayingActive];
-    shouldBeginEditing = NO;
-    [self dismissKeyboard];
     self.nearSearch.text = [self placeAtIndexPath:indexPath].name;
+   /* [[self geocoder] geocodeAddressString:[self placeAtIndexPath:indexPath].name completionHandler:^(^(NSArray *placemarks, NSError *error))]
+    {
+        if(!error)
+        {
+            for(CLPlacemark *placemark in placemarks)
+            {
+                NSLog(@"%@",[placemark description])
+                CLPlacemark *placemark = [placemarks lastObject];
+                
+            }
+        }
+        else
+        {
+            NSLog(@"There was a geocoding error\n%@",[error localizedDescription]);
+        }
+    }*/
+    
+
+    [self dismissSearchControllerWhileStayingActive];
+    [self dismissKeyboard];
 }
 
 

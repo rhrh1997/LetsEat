@@ -47,7 +47,9 @@
     [query fetchPlaceDetail:^(NSDictionary *placeDictionary, NSError *error) {
         if (error) {
             block(nil, nil, error);
-        } else {
+        }
+        else
+        {
             NSString *addressString = placeDictionary[@"formatted_address"];
             [[self geocoder] geocodeAddressString:addressString completionHandler:^(NSArray *placemarks, NSError *error) {
                 if (error) {

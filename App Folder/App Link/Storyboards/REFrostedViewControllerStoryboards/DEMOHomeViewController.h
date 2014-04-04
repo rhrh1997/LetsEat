@@ -11,11 +11,13 @@
 #import <MapKit/MapKit.h>
 
 
+
 @class SPGooglePlacesAutocompleteQuery;
 
 
-@interface DEMOHomeViewController : UIViewController <UISearchBarDelegate, UITableViewDataSource, UITableViewDelegate, UISearchDisplayDelegate, UISearchBarDelegate>  {
-
+@interface DEMOHomeViewController : UIViewController <UISearchBarDelegate, UITableViewDataSource, UITableViewDelegate, UISearchDisplayDelegate, UISearchBarDelegate, CLLocationManagerDelegate>  {
+    
+    CLGeocoder *geocoder;
     NSArray *searchResultPlaces;
     SPGooglePlacesAutocompleteQuery *searchQuery;
     MKPointAnnotation *selectedPlaceAnnotation;
@@ -28,16 +30,15 @@
 @property (strong, nonatomic) IBOutlet UILabel *nearWhere;
 @property (strong, nonatomic) IBOutlet UISearchBar *whatSearch;
 @property (strong, nonatomic) IBOutlet FUIButton *curLoc;
-@property (strong, nonatomic) IBOutlet UIActivityIndicatorView *afterSearchload;
-@property (strong, nonatomic) IBOutlet UILabel *afterSearchlabel;
 @property (strong, nonatomic) IBOutlet FUIButton *curOrder;
 @property (strong, nonatomic) IBOutlet UISearchBar *nearSearch;
 //@property (nonatomic,strong) IBOutlet UITableView *tableView;
-
+@property (strong,nonatomic) CLLocation *reference;
 @property (nonatomic, strong) NSArray *places;
-@property (strong, nonatomic) IBOutlet UITableView *nearSuggest;
-
 @property (strong, nonatomic) IBOutlet MKMapView *mapView;
+@property (strong, nonatomic) IBOutlet FUIButton *pastOrders;
+@property (strong, nonatomic) IBOutlet FUIButton *favorites;
+@property (strong, nonatomic) IBOutlet FUIButton *accountSettings;
 
 
 - (IBAction)curOrdTouch:(id)sender;
