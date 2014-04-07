@@ -27,7 +27,6 @@
 		3032B8E31805A21600064F85 /* UIView+REFrostedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3032B8DD1805A21600064F85 /* UIView+REFrostedViewController.m */; };
 		3032B8E41805A21600064F85 /* UIViewController+REFrostedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3032B8DF1805A21600064F85 /* UIViewController+REFrostedViewController.m */; };
 		3032B8E71805A26500064F85 /* DEMONavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3032B8E61805A26500064F85 /* DEMONavigationController.m */; };
-		3032B8EA1805A4BF00064F85 /* DEMOSecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3032B8E91805A4BF00064F85 /* DEMOSecondViewController.m */; };
 		3032B8FD1805AB5600064F85 /* avatar@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3032B8FC1805AB5600064F85 /* avatar@2x.jpg */; };
 		3032B9001805BC8E00064F85 /* RECommonFunctions.m in Sources */ = {isa = PBXBuildFile; fileRef = 3032B8FF1805BC8E00064F85 /* RECommonFunctions.m */; };
 		5EA966B8E9304DB9BF81342F /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C106F8B4317A4D788877CA30 /* libPods.a */; };
@@ -37,6 +36,7 @@
 		7390DF3518CCF6950057030B /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 7390DF3418CCF6950057030B /* libsqlite3.dylib */; };
 		739451EC18CF8CAA004784D3 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 739451EB18CF8CAA004784D3 /* Parse.framework */; };
 		739451EE18CF8E5A004784D3 /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 739451ED18CF8E5A004784D3 /* FacebookSDK.framework */; };
+		750A744C18F22CD40022116E /* PastOrderList.m in Sources */ = {isa = PBXBuildFile; fileRef = 750A744B18F22CD30022116E /* PastOrderList.m */; };
 		7516E8281852B3E900CA8D26 /* REFrostedViewControllerExample-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7516E8271852B3E900CA8D26 /* REFrostedViewControllerExample-Info.plist */; };
 		75202ED218C50AE500F01443 /* SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 75202ED118C50AE500F01443 /* SearchViewController.m */; };
 		756FEA2918616B64004476D1 /* CurrentOrderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 756FEA2718616B64004476D1 /* CurrentOrderViewController.m */; };
@@ -112,8 +112,6 @@
 		3032B8DF1805A21600064F85 /* UIViewController+REFrostedViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+REFrostedViewController.m"; sourceTree = "<group>"; };
 		3032B8E51805A26500064F85 /* DEMONavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DEMONavigationController.h; sourceTree = "<group>"; };
 		3032B8E61805A26500064F85 /* DEMONavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DEMONavigationController.m; sourceTree = "<group>"; };
-		3032B8E81805A4BF00064F85 /* DEMOSecondViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DEMOSecondViewController.h; sourceTree = "<group>"; };
-		3032B8E91805A4BF00064F85 /* DEMOSecondViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DEMOSecondViewController.m; sourceTree = "<group>"; };
 		3032B8FC1805AB5600064F85 /* avatar@2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "avatar@2x.jpg"; sourceTree = "<group>"; };
 		3032B8FE1805BC8E00064F85 /* RECommonFunctions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RECommonFunctions.h; sourceTree = "<group>"; };
 		3032B8FF1805BC8E00064F85 /* RECommonFunctions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RECommonFunctions.m; sourceTree = "<group>"; };
@@ -125,6 +123,8 @@
 		7390DF3418CCF6950057030B /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
 		739451EB18CF8CAA004784D3 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
 		739451ED18CF8E5A004784D3 /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FacebookSDK.framework; sourceTree = "<group>"; };
+		750A744A18F22CD30022116E /* PastOrderList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PastOrderList.h; path = ../PastOrderList.h; sourceTree = "<group>"; };
+		750A744B18F22CD30022116E /* PastOrderList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PastOrderList.m; path = ../PastOrderList.m; sourceTree = "<group>"; };
 		7516E8271852B3E900CA8D26 /* REFrostedViewControllerExample-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "REFrostedViewControllerExample-Info.plist"; sourceTree = "<group>"; };
 		75202ED018C50AE500F01443 /* SearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchViewController.h; sourceTree = "<group>"; };
 		75202ED118C50AE500F01443 /* SearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchViewController.m; sourceTree = "<group>"; };
@@ -323,8 +323,6 @@
 			children = (
 				3032B8CC1805A1BC00064F85 /* DEMOHomeViewController.h */,
 				3032B8CD1805A1BC00064F85 /* DEMOHomeViewController.m */,
-				3032B8E81805A4BF00064F85 /* DEMOSecondViewController.h */,
-				3032B8E91805A4BF00064F85 /* DEMOSecondViewController.m */,
 				75E36F0C186369B800300EF7 /* MessagesViewController.h */,
 				75E36F0D186369B800300EF7 /* MessagesViewController.m */,
 				75E36F1218636A7F00300EF7 /* SettingsViewController.h */,
@@ -400,6 +398,8 @@
 			children = (
 				756FEA2618616B64004476D1 /* CurrentOrderViewController.h */,
 				756FEA2718616B64004476D1 /* CurrentOrderViewController.m */,
+				750A744A18F22CD30022116E /* PastOrderList.h */,
+				750A744B18F22CD30022116E /* PastOrderList.m */,
 				75E36F0F18636A1C00300EF7 /* OrderCheck.h */,
 				75E36F1018636A1C00300EF7 /* OrderCheck.m */,
 				75E36F0018633B7200300EF7 /* OrderSummaryAndPayment.h */,
@@ -554,6 +554,7 @@
 			files = (
 				3032B8CE1805A1BC00064F85 /* DEMOHomeViewController.m in Sources */,
 				3032B8E11805A21600064F85 /* REFrostedViewController.m in Sources */,
+				750A744C18F22CD40022116E /* PastOrderList.m in Sources */,
 				7584ACE218CB984A0052E534 /* SPGooglePlacesAutocompletePlace.m in Sources */,
 				3032B9001805BC8E00064F85 /* RECommonFunctions.m in Sources */,
 				7584ACE318CB984A0052E534 /* SPGooglePlacesAutocompleteQuery.m in Sources */,
@@ -565,7 +566,6 @@
 				7337050B18CE362900575A5D /* CMQMasterViewController.m in Sources */,
 				3032B8A91805A10100064F85 /* DEMORootViewController.m in Sources */,
 				7584ACE418CB984A0052E534 /* SPGooglePlacesPlaceDetailQuery.m in Sources */,
-				3032B8EA1805A4BF00064F85 /* DEMOSecondViewController.m in Sources */,
 				756FEA2918616B64004476D1 /* CurrentOrderViewController.m in Sources */,
 				7584ACE518CB984A0052E534 /* SPGooglePlacesAutocompleteUtilities.m in Sources */,
 				3032B8E21805A21600064F85 /* UIImage+REFrostedViewController.m in Sources */,
