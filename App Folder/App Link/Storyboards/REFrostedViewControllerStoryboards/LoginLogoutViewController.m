@@ -34,6 +34,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    self.navigationItem.title = @"Account";
     if (![PFUser currentUser]) { // No user logged in
         // Create the log in view controller
         NSLog(@"Usernotlogged");
