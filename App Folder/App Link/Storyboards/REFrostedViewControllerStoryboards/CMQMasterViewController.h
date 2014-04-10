@@ -17,4 +17,5 @@
 
 @property (strong, nonatomic) CMQDetailViewController *detailViewController;
 
+@property(readwrite,nonatomic) CLLocationCoordinate2D nearThis;
 @end

@@ -53,8 +53,26 @@ CLLocationCoordinate2D userLocation;
 
 -(PFQuery *)queryForTable
 {
-    CLLocation *location = locationManager.location;
-    CLLocationCoordinate2D coordinate = [location coordinate];
+    
+    locationManager = [[CLLocationManager alloc] init];
+    CLLocationCoordinate2D coordinate;
+    if((self.nearThis.longitude == 0.0) && (self.nearThis.latitude == 0.0))
+    {
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Location Error!"
+                                                        message:@"Location not entered, current location will be used to find nearest restauraunts!"
+                                                       delegate:nil
+                                              cancelButtonTitle:@"OK"
+                                              otherButtonTitles:nil, nil];
+        [alert show];
+        coordinate = locationManager.location.coordinate;
+
+    }
+    else
+    {
+        NSLog(@"Location success");
+        coordinate = self.nearThis;
+    }
+
     NSLog (@"%f", coordinate.latitude );
     PFGeoPoint *geoPoint = [PFGeoPoint geoPointWithLatitude:coordinate.latitude
                                                   longitude:coordinate.longitude];

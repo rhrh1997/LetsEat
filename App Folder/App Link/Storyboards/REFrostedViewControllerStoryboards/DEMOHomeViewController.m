@@ -104,7 +104,7 @@ CLLocationCoordinate2D userLocation;
     self.accountSettings.buttonColor = [UIColor pomegranateColor];
     self.accountSettings.shadowColor = [UIColor greenSeaColor];
     self.accountSettings.shadowHeight = 0.0f;
-    self.accountSettings.cornerRadius = 9.0f;
+    self.accountSettings.cornerRadius = 0.0f;
     self.accountSettings.titleLabel.font = [UIFont boldFlatFontOfSize:20];
     [self.accountSettings setTitleColor:[UIColor cloudsColor] forState:UIControlStateNormal];
     [self.accountSettings setTitleColor:[UIColor cloudsColor] forState:UIControlStateHighlighted];
@@ -165,13 +165,13 @@ CLLocationCoordinate2D userLocation;
     }
     
         
-    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc]
-                                   initWithTarget:self
-                                   action:@selector(dismissKeyboard)];
-
-    
-    
-    [self.view addGestureRecognizer:tap];
+//    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc]
+//                                   initWithTarget:self
+//                                   action:@selector(dismissKeyboard)];
+//
+//    
+//    
+//    [self.view addGestureRecognizer:tap];
  
 
 }
@@ -249,6 +249,7 @@ CLLocationCoordinate2D userLocation;
     if([segue.identifier isEqualToString:@"CMQMasterViewController"])
     {
         CMQMasterViewController *controller = (CMQMasterViewController *)segue.destinationViewController;
+        controller.nearThis = self.reference.coordinate;
         
     }
 }
@@ -277,27 +278,29 @@ CLLocationCoordinate2D userLocation;
     
     SPGooglePlacesAutocompletePlace *place = [self placeAtIndexPath:indexPath];
     [self.searchDisplayController.searchResultsTableView deselectRowAtIndexPath:indexPath animated:NO];
-    self.nearSearch.text = [self placeAtIndexPath:indexPath].name;
-   /* [[self geocoder] geocodeAddressString:[self placeAtIndexPath:indexPath].name completionHandler:^(^(NSArray *placemarks, NSError *error))]
-    {
-        if(!error)
-        {
-            for(CLPlacemark *placemark in placemarks)
-            {
-                NSLog(@"%@",[placemark description])
-                CLPlacemark *placemark = [placemarks lastObject];
-                
-            }
-        }
-        else
-        {
-            NSLog(@"There was a geocoding error\n%@",[error localizedDescription]);
-        }
-    }*/
+    self.nearSearch.text = place.name;
+    NSString *selectedCell = place.name;
+   // CLGeocoder *geocoder = [[CLGeocoder alloc] init];
+    [self.geocoder geocodeAddressString:selectedCell completionHandler:^(NSArray *placemarks, NSError *error)
+     {
+         if(error)
+         {
+             NSLog(@"Geocode failed with error: %@", error);
+             return;
+         }
+         if([placemarks count] > 0)
+         {
+             CLPlacemark *placemark = [placemarks objectAtIndex:0];
+             CLLocation *location = placemark.location;
+             CLLocationCoordinate2D coordinate = location.coordinate;
+             NSLog(@"%f, %f", coordinate.latitude, coordinate.longitude);
+             self.reference = location;
+         }
+     }];
     
-
+    
     [self dismissSearchControllerWhileStayingActive];
-    [self dismissKeyboard];
+    //[self dismissKeyboard];
 }
 
 
@@ -317,7 +320,7 @@ CLLocationCoordinate2D userLocation;
 
 - (void)handleSearchForSearchString:(NSString *)searchString {
     NSLog(@"Call 6");
-       searchQuery = [[SPGooglePlacesAutocompleteQuery alloc] initWithApiKey:@"AIzaSyAFsaDn7vyI8pS53zBgYRxu0HfRwYqH-9E"];
+       searchQuery = [[SPGooglePlacesAutocompleteQuery alloc] initWithApiKey:@"AIzaSyCjdfWfKP87-XuMczSFMZIATrYeVr9Ciic"];
     searchQuery.location = self.mapView.userLocation.coordinate;
     searchQuery.input = searchString;
     [searchQuery fetchPlaces:^(NSArray *places, NSError *error) {
@@ -369,7 +372,11 @@ CLLocationCoordinate2D userLocation;
     [UIView commitAnimations];
     [self.searchDisplayController.searchBar setShowsCancelButton:NO animated:YES];
     [self.searchDisplayController.searchBar resignFirstResponder];
+    [self.searchDisplayController.searchResultsTableView resignFirstResponder];
+    [self.searchDisplayController.searchContentsController resignFirstResponder];
 }
+
+
 
 - (BOOL)searchBarShouldBeginEditing:(UISearchBar *)searchBar {
    

@@ -216,12 +216,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "REFrostedViewControllerStoryboards/CMQMasterViewController.m"
-            timestampString = "418157812.602435"
+            timestampString = "418763291.41579"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "75"
-            endingLineNumber = "75"
-            landmarkName = "-locationManager"
+            startingLineNumber = "83"
+            endingLineNumber = "83"
+            landmarkName = "-queryForTable"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -247,13 +247,13 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "REFrostedViewControllerStoryboards/CMQMasterViewController.m"
-            timestampString = "418157199.497407"
+            filePath = "REFrostedViewControllerStoryboards/DEMOHomeViewController.m"
+            timestampString = "418674172.79004"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "60"
-            endingLineNumber = "60"
-            landmarkName = "-queryForTable"
+            startingLineNumber = "284"
+            endingLineNumber = "284"
+            landmarkName = "-tableView:didSelectRowAtIndexPath:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -264,11 +264,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "REFrostedViewControllerStoryboards/DEMOHomeViewController.m"
-            timestampString = "418330237.621813"
+            timestampString = "418674172.79004"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "281"
-            endingLineNumber = "281"
+            startingLineNumber = "299"
+            endingLineNumber = "299"
             landmarkName = "-tableView:didSelectRowAtIndexPath:"
             landmarkType = "5">
          </BreakpointContent>

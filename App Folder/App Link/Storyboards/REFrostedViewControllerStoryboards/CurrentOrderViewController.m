@@ -29,7 +29,7 @@
     self.ReturnButton.buttonColor = [UIColor emerlandColor];
     self.ReturnButton.shadowColor = [UIColor greenSeaColor];
     self.ReturnButton.shadowHeight = 0.0f;
-    self.ReturnButton.cornerRadius = 6.0f;
+    self.ReturnButton.cornerRadius = 0.0f;
     self.ReturnButton.titleLabel.font = [UIFont boldFlatFontOfSize:16];
     [self.ReturnButton setTitleColor:[UIColor cloudsColor] forState:UIControlStateNormal];
     [self.ReturnButton setTitleColor:[UIColor cloudsColor] forState:UIControlStateHighlighted];
@@ -40,7 +40,7 @@
     self.connectButton.buttonColor = [UIColor emerlandColor];
     self.connectButton.shadowColor = [UIColor greenSeaColor];
     self.connectButton.shadowHeight = 0.0f;
-    self.connectButton.cornerRadius = 6.0f;
+    self.connectButton.cornerRadius = 0.0f;
     self.connectButton.titleLabel.font = [UIFont boldFlatFontOfSize:16];
     [self.connectButton setTitleColor:[UIColor cloudsColor] forState:UIControlStateNormal];
     [self.connectButton setTitleColor:[UIColor cloudsColor] forState:UIControlStateHighlighted];
@@ -48,7 +48,7 @@
     self.cancelButton.buttonColor = [UIColor pomegranateColor];
     self.cancelButton.shadowColor = [UIColor alizarinColor];
     self.cancelButton.shadowHeight = 1.0f;
-    self.cancelButton.cornerRadius = 6.0f;
+    self.cancelButton.cornerRadius = 0.0f;
     self.cancelButton.titleLabel.font = [UIFont boldFlatFontOfSize:16];
     [self.cancelButton setTitleColor:[UIColor cloudsColor] forState:UIControlStateNormal];
     [self.cancelButton setTitleColor:[UIColor cloudsColor] forState:UIControlStateHighlighted];
