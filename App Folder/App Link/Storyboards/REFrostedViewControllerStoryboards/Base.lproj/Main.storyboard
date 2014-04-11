@@ -116,7 +116,6 @@
                                 <state key="normal" title="Search"/>
                                 <connections>
                                     <action selector="pressed:" destination="jsP-Dz-DYG" eventType="touchUpInside" id="l55-CE-M1j"/>
-                                    <segue destination="365-aB-zsf" kind="push" id="RnP-Wu-QDQ"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yv6-2c-0XP" customClass="FUIButton">
@@ -200,6 +199,7 @@
                         <outlet property="searchDisplayController" destination="hXB-jO-HzS" id="gcx-tb-a2G"/>
                         <outlet property="whatEat" destination="Bue-fS-yK8" id="42i-1u-fTD"/>
                         <outlet property="whatSearch" destination="DW4-3b-3C8" id="HHn-Rh-4ru"/>
+                        <segue destination="365-aB-zsf" kind="push" identifier="toResults" id="tqw-ru-i2j"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Awc-v8-Z61" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -293,10 +293,10 @@
             </objects>
             <point key="canvasLocation" x="2130" y="-1063"/>
         </scene>
-        <!--Master View Controller-->
+        <!--Master View Controller - CMQMasterViewController-->
         <scene sceneID="mok-51-J4Y">
             <objects>
-                <tableViewController id="365-aB-zsf" customClass="CMQMasterViewController" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="CMQMasterViewController" title="CMQMasterViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="365-aB-zsf" customClass="CMQMasterViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="Oxv-BD-4lP">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -320,7 +320,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eX0-oq-mzW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2432" y="-451"/>
+            <point key="canvasLocation" x="2054" y="-496"/>
         </scene>
         <!--Detail View Controller - Placehold-->
         <scene sceneID="LW3-89-IwF">

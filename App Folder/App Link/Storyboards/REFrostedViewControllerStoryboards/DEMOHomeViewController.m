@@ -220,7 +220,7 @@ CLLocationCoordinate2D userLocation;
 - (IBAction)pressed:(id)sender {
     //Search button
     NSLog(@"Pressy Pressy");
-   
+    [self performSegueWithIdentifier:@"toResults"sender:nil];
  //   NSString *what = self.whatSearch.text;
   //  NSString *where = self.nearSearch.text;
  //   NSString *mileage = @"5";
@@ -244,13 +244,16 @@ CLLocationCoordinate2D userLocation;
     return geocoder;
 }
 
+
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-    if([segue.identifier isEqualToString:@"CMQMasterViewController"])
+    if([segue.identifier isEqualToString:@"toResults"])
     {
+        NSLog(@"Segue Intensifed");
         CMQMasterViewController *controller = (CMQMasterViewController *)segue.destinationViewController;
         controller.nearThis = self.reference.coordinate;
-        
+        NSLog(@"Check controller %f, %f", controller.nearThis.latitude, controller.nearThis.longitude);
+
         
     }
 }
