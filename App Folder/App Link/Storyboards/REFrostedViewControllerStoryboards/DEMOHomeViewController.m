@@ -259,8 +259,8 @@ CLLocationCoordinate2D userLocation;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    NSLog(@"Call 1");
-    NSLog(@"%lu", (unsigned long)[searchResultPlaces count]);
+  //  NSLog(@"Call 1");
+   // NSLog(@"%lu", (unsigned long)[searchResultPlaces count]);
     return [searchResultPlaces count];
     
     
@@ -269,7 +269,7 @@ CLLocationCoordinate2D userLocation;
 
 
 - (SPGooglePlacesAutocompletePlace *)placeAtIndexPath:(NSIndexPath *)indexPath {
-    NSLog(@"Call 2");
+   // NSLog(@"Call 2");
     return searchResultPlaces[indexPath.row];
     
 }
@@ -278,15 +278,13 @@ CLLocationCoordinate2D userLocation;
 
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    NSLog(@"Call 5");
-    
+    //NSLog(@"Call 5");
+    self.searchButton.titleLabel.text = @"Wait..";
     SPGooglePlacesAutocompletePlace *place = [self placeAtIndexPath:indexPath];
     [self.searchDisplayController.searchResultsTableView deselectRowAtIndexPath:indexPath animated:NO];
-    self.nearSearch.text = place.name;
     NSString *selectedCell = place.name;
     [self dismissSearchControllerWhileStayingActive];
-
-   // CLGeocoder *geocoder = [[CLGeocoder alloc] init];
+    //CLGeocoder *geocoder = [[CLGeocoder alloc] init];
     [self.geocoder geocodeAddressString:selectedCell completionHandler:^(NSArray *placemarks, NSError *error)
      {
          if(error)
@@ -303,19 +301,16 @@ CLLocationCoordinate2D userLocation;
              self.reference = location;
          }
      }];
-    
+    self.searchButton.titleLabel.text = @"Search";
     
     self.nearSearch.text = place.name;
-    
-
-
     //[self dismissKeyboard];
 }
 
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    NSLog(@"Call 5b");
+   // NSLog(@"Call 5b");
     static NSString *cellIdentifier = @"SPGooglePlacesAutocompleteCell";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
     if (!cell) {
@@ -328,7 +323,7 @@ CLLocationCoordinate2D userLocation;
 }
 
 - (void)handleSearchForSearchString:(NSString *)searchString {
-    NSLog(@"Call 6");
+   // NSLog(@"Call 6");
        searchQuery = [[SPGooglePlacesAutocompleteQuery alloc] initWithApiKey:@"AIzaSyCjdfWfKP87-XuMczSFMZIATrYeVr9Ciic"];
     searchQuery.location = self.mapView.userLocation.coordinate;
     searchQuery.input = searchString;
@@ -345,11 +340,11 @@ CLLocationCoordinate2D userLocation;
             [self.searchDisplayController.searchResultsTableView reloadData];
         }
     }];
-    NSLog(@"Call 6a");
+    //NSLog(@"Call 6a");
 }
 
 - (BOOL)searchDisplayController:(UISearchDisplayController *)controller shouldReloadTableForSearchString:(NSString *)searchString {
-    NSLog(@"Call 7");
+   // NSLog(@"Call 7");
     [self handleSearchForSearchString:searchString];
     
     // Return YES to cause the search result table view to be reloaded.
@@ -362,10 +357,10 @@ CLLocationCoordinate2D userLocation;
 - (void)searchBar:(UISearchBar *)searchBar textDidChange:(NSString *)searchText {
     if(searchBar == self.nearSearch)
     {
-    NSLog(@"Call 8");
+   // NSLog(@"Call 8");
    if (![searchBar isFirstResponder]) {
         // User tapped the 'clear' button.
-        NSLog(@"Call 8a");
+        //NSLog(@"Call 8a");
         shouldBeginEditing = NO;
         [self.searchDisplayController setActive:NO];
     }
@@ -395,7 +390,7 @@ CLLocationCoordinate2D userLocation;
     //this is checking if it is the nearSearch bar beggining to be searched or the whatSearch
     if(searchBar == self.nearSearch)
    {
-    NSLog(@"Call 9a");
+   // NSLog(@"Call 9a");
     if (shouldBeginEditing) {
         // Animate in the table view.
         [self.searchDisplayController.searchBar setShowsCancelButton:NO animated:NO];

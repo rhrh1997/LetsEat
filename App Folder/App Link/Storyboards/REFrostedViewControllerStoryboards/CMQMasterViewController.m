@@ -66,7 +66,7 @@ CLLocationCoordinate2D userLocation;
         NSLog(@"Location success");
     }
 
-    NSLog (@"%f", self.nearThis.latitude );
+    NSLog (@"Check resulting coordinates%f, %f", self.nearThis.latitude, self.nearThis.longitude );
     PFGeoPoint *geoPoint = [PFGeoPoint geoPointWithLatitude:self.nearThis.latitude
                                                   longitude:self.nearThis.longitude];
     PFQuery *query = [PFQuery queryWithClassName:self.parseClassName];

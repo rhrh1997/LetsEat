@@ -248,11 +248,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "REFrostedViewControllerStoryboards/DEMOHomeViewController.m"
-            timestampString = "418935418.055392"
+            timestampString = "418936594.944592"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "290"
-            endingLineNumber = "290"
+            startingLineNumber = "288"
+            endingLineNumber = "288"
             landmarkName = "-tableView:didSelectRowAtIndexPath:"
             landmarkType = "5">
          </BreakpointContent>
@@ -264,7 +264,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "REFrostedViewControllerStoryboards/DEMOHomeViewController.m"
-            timestampString = "418935418.055392"
+            timestampString = "418936594.944592"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "305"
