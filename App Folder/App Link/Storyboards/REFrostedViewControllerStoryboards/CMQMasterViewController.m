@@ -55,27 +55,20 @@ CLLocationCoordinate2D userLocation;
 {
     
     locationManager = [[CLLocationManager alloc] init];
-    CLLocationCoordinate2D coordinate;
     if((self.nearThis.longitude == 0.0) && (self.nearThis.latitude == 0.0))
     {
-        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Location Error!"
-                                                        message:@"Location not entered, current location will be used to find nearest restauraunts!"
-                                                       delegate:nil
-                                              cancelButtonTitle:@"OK"
-                                              otherButtonTitles:nil, nil];
-        [alert show];
-        coordinate = locationManager.location.coordinate;
+
+        self.nearThis = locationManager.location.coordinate;
 
     }
     else
     {
         NSLog(@"Location success");
-        coordinate = self.nearThis;
     }
 
-    NSLog (@"%f", coordinate.latitude );
-    PFGeoPoint *geoPoint = [PFGeoPoint geoPointWithLatitude:coordinate.latitude
-                                                  longitude:coordinate.longitude];
+    NSLog (@"%f", self.nearThis.latitude );
+    PFGeoPoint *geoPoint = [PFGeoPoint geoPointWithLatitude:self.nearThis.latitude
+                                                  longitude:self.nearThis.longitude];
     PFQuery *query = [PFQuery queryWithClassName:self.parseClassName];
     [query whereKey:@"Location" nearGeoPoint:geoPoint];
    //[query whereKey:@"Delivers" equalTo:[NSNumber numberWithBool:YES]];
@@ -111,6 +104,26 @@ CLLocationCoordinate2D userLocation;
     locationManager.desiredAccuracy = kCLLocationAccuracyHundredMeters; // 100 m
     [locationManager startUpdatingLocation];
     [super viewDidLoad];
+    
+    CLLocationCoordinate2D coordinate;
+    if(((self.nearThis.longitude == 0.0) && (self.nearThis.latitude == 0.0)) || !(CLLocationCoordinate2DIsValid(self.nearThis)))
+    {
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Location Error!"
+                                                        message:@"Location not entered, current location will be used to find nearest restauraunts!"
+                                                       delegate:nil
+                                              cancelButtonTitle:@"OK"
+                                              otherButtonTitles:nil, nil];
+        [alert show];
+        coordinate = locationManager.location.coordinate;
+        
+    }
+    else
+    {
+        NSLog(@"Location success");
+        coordinate = self.nearThis;
+    }
+    
+
     
     // Uncomment the following line for Universal Apps
     self.detailViewController = (CMQDetailViewController *)[[self.splitViewController.viewControllers lastObject] topViewController];
@@ -282,10 +295,9 @@ CLLocationCoordinate2D userLocation;
 
  - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
  {
- if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad) {
  PFObject *object = [self objectAtIndexPath:indexPath];
  self.detailViewController.detailItem = object;
- }
+ 
  }
 
 

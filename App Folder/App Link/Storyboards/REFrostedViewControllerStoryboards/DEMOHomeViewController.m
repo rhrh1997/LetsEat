@@ -251,6 +251,7 @@ CLLocationCoordinate2D userLocation;
         CMQMasterViewController *controller = (CMQMasterViewController *)segue.destinationViewController;
         controller.nearThis = self.reference.coordinate;
         
+        
     }
 }
 
@@ -280,6 +281,8 @@ CLLocationCoordinate2D userLocation;
     [self.searchDisplayController.searchResultsTableView deselectRowAtIndexPath:indexPath animated:NO];
     self.nearSearch.text = place.name;
     NSString *selectedCell = place.name;
+    [self dismissSearchControllerWhileStayingActive];
+
    // CLGeocoder *geocoder = [[CLGeocoder alloc] init];
     [self.geocoder geocodeAddressString:selectedCell completionHandler:^(NSArray *placemarks, NSError *error)
      {
@@ -299,7 +302,10 @@ CLLocationCoordinate2D userLocation;
      }];
     
     
-    [self dismissSearchControllerWhileStayingActive];
+    self.nearSearch.text = place.name;
+    
+
+
     //[self dismissKeyboard];
 }
 
@@ -363,6 +369,7 @@ CLLocationCoordinate2D userLocation;
     }
 }
 
+
 - (void)dismissSearchControllerWhileStayingActive {
     // Animate out the table view.
     NSTimeInterval animationDuration = 0.3;
@@ -374,6 +381,8 @@ CLLocationCoordinate2D userLocation;
     [self.searchDisplayController.searchBar resignFirstResponder];
     [self.searchDisplayController.searchResultsTableView resignFirstResponder];
     [self.searchDisplayController.searchContentsController resignFirstResponder];
+    [self.searchDisplayController setActive:NO];
+
 }
 
 
@@ -386,13 +395,14 @@ CLLocationCoordinate2D userLocation;
     NSLog(@"Call 9a");
     if (shouldBeginEditing) {
         // Animate in the table view.
+        [self.searchDisplayController.searchBar setShowsCancelButton:NO animated:NO];
         NSTimeInterval animationDuration = 0.3;
         [UIView beginAnimations:nil context:NULL];
         [UIView setAnimationDuration:animationDuration];
         self.searchDisplayController.searchResultsTableView.alpha = 0.75;
         [UIView commitAnimations];
         
-        [self.searchDisplayController.searchBar setShowsCancelButton:NO animated:NO];
+        
     }
     BOOL boolToReturn = shouldBeginEditing;
     shouldBeginEditing = YES;
