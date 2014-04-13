@@ -297,7 +297,7 @@ CLLocationCoordinate2D userLocation;
  {
  PFObject *object = [self objectAtIndexPath:indexPath];
  self.detailViewController.detailItem = object;
- 
+    [self performSegueWithIdentifier:@"showDetail"sender:nil]; 
  }
 
 
