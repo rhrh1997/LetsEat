@@ -20,7 +20,6 @@
 		3032B8B31805A10100064F85 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3032B8921805A10100064F85 /* Foundation.framework */; };
 		3032B8B41805A10100064F85 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3032B8961805A10100064F85 /* UIKit.framework */; };
 		3032B8CE1805A1BC00064F85 /* DEMOHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3032B8CD1805A1BC00064F85 /* DEMOHomeViewController.m */; };
-		3032B8D11805A1D200064F85 /* DEMOMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3032B8D01805A1D200064F85 /* DEMOMenuViewController.m */; };
 		3032B8E01805A21600064F85 /* REFrostedContainerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3032B8D71805A21600064F85 /* REFrostedContainerViewController.m */; };
 		3032B8E11805A21600064F85 /* REFrostedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3032B8D91805A21600064F85 /* REFrostedViewController.m */; };
 		3032B8E21805A21600064F85 /* UIImage+REFrostedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3032B8DB1805A21600064F85 /* UIImage+REFrostedViewController.m */; };
@@ -98,8 +97,6 @@
 		3032B8B11805A10100064F85 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		3032B8CC1805A1BC00064F85 /* DEMOHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DEMOHomeViewController.h; sourceTree = "<group>"; };
 		3032B8CD1805A1BC00064F85 /* DEMOHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DEMOHomeViewController.m; sourceTree = "<group>"; };
-		3032B8CF1805A1D200064F85 /* DEMOMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DEMOMenuViewController.h; sourceTree = "<group>"; };
-		3032B8D01805A1D200064F85 /* DEMOMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DEMOMenuViewController.m; sourceTree = "<group>"; };
 		3032B8D61805A21600064F85 /* REFrostedContainerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = REFrostedContainerViewController.h; sourceTree = "<group>"; };
 		3032B8D71805A21600064F85 /* REFrostedContainerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = REFrostedContainerViewController.m; sourceTree = "<group>"; };
 		3032B8D81805A21600064F85 /* REFrostedViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = REFrostedViewController.h; sourceTree = "<group>"; };
@@ -382,8 +379,6 @@
 		75E36F1818636AC000300EF7 /* Menu View Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				3032B8CF1805A1D200064F85 /* DEMOMenuViewController.h */,
-				3032B8D01805A1D200064F85 /* DEMOMenuViewController.m */,
 				3032B8E61805A26500064F85 /* DEMONavigationController.m */,
 				3032B8E51805A26500064F85 /* DEMONavigationController.h */,
 				3032B8A71805A10100064F85 /* DEMORootViewController.h */,
@@ -569,7 +564,6 @@
 				756FEA2918616B64004476D1 /* CurrentOrderViewController.m in Sources */,
 				7584ACE518CB984A0052E534 /* SPGooglePlacesAutocompleteUtilities.m in Sources */,
 				3032B8E21805A21600064F85 /* UIImage+REFrostedViewController.m in Sources */,
-				3032B8D11805A1D200064F85 /* DEMOMenuViewController.m in Sources */,
 				3032B8A31805A10100064F85 /* DEMOAppDelegate.m in Sources */,
 				3032B8E41805A21600064F85 /* UIViewController+REFrostedViewController.m in Sources */,
 				3032B8E01805A21600064F85 /* REFrostedContainerViewController.m in Sources */,

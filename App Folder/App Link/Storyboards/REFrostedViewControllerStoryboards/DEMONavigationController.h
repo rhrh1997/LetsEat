@@ -7,6 +7,5 @@
 
 @interface DEMONavigationController : UINavigationController
 
-- (void)panGestureRecognized:(UIPanGestureRecognizer *)sender;
 
 @end

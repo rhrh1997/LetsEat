@@ -19,9 +19,6 @@
 #pragma mark -
 #pragma mark Gesture recognizer
 
-- (void)panGestureRecognized:(UIPanGestureRecognizer *)sender
-{
-    [self.frostedViewController panGestureRecognized:sender];
-}
+
 
 @end
