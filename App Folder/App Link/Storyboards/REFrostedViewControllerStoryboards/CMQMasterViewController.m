@@ -18,7 +18,7 @@ CLLocationCoordinate2D userLocation;
  {
      if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad) {
          self.clearsSelectionOnViewWillAppear = NO;
-         self.contentSizeForViewInPopover = CGSizeMake(320.0, 600.0);
+         self.preferredContentSize = CGSizeMake(320.0, 600.0);
  }
  [super awakeFromNib];
  }

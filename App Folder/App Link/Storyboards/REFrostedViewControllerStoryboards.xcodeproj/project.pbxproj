@@ -218,12 +218,12 @@
 			children = (
 				75C74DD91886F25C00D19FF2 /* .gitignore */,
 				3032B8A41805A10100064F85 /* Main.storyboard */,
+				3032B8FB1805AB4600064F85 /* Function Controllers */,
 				3032B8981805A10100064F85 /* Delegate stuff */,
 				7337050618CE35F100575A5D /* Restaurant Tabley Stuff */,
 				75E36F1818636AC000300EF7 /* Menu View Controllers */,
 				7584ACCB18CAD35F0052E534 /* Google Suggestion Classes */,
 				75E36F1918636B0900300EF7 /* Order Process */,
-				3032B8FB1805AB4600064F85 /* Function Controllers */,
 				75202ED318C50E4E00F01443 /* Image Resources */,
 				3032B8991805A10100064F85 /* Supporting Files */,
 				3032B8911805A10100064F85 /* Frameworks */,

@@ -196,6 +196,7 @@ CLLocationCoordinate2D userLocation;
     
     //Current Location Button press
     NSLog(@"Pressed curLocs");
+    [locationManager startUpdatingLocation];
     NSString *curLocs =[NSString stringWithFormat:@"latitude: %f longitude: %f", locationManager.location.coordinate.latitude, locationManager.location.coordinate.longitude];
     self.reference = locationManager.location;
     self.nearSearch.text= curLocs;
