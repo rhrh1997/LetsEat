@@ -46,7 +46,7 @@
         <!--Home View Controller-->
         <scene sceneID="4d1-Jz-tGk">
             <objects>
-                <viewController storyboardIdentifier="homeController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="jsP-Dz-DYG" customClass="DEMOHomeViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="homeController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="jsP-Dz-DYG" customClass="HomeViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="xlu-DO-MyB"/>
                         <viewControllerLayoutGuide type="bottom" id="bit-6w-mne"/>

@@ -1,22 +1,22 @@
 //
-//  DEMOHomeViewController.m
-// defEAT
+//  HomeViewController.m
+// Let's Eat
 //
 
-#import "DEMOHomeViewController.h"
+#import "HomeViewController.h"
 #import <MapKit/MapKit.h>
 #import "SPGooglePlacesAutocomplete.h"
 #import "CMQMasterViewController.h"
 
 
 
-@interface DEMOHomeViewController ()
+@interface HomeViewController ()
 
 
 
 @end
 
-@implementation DEMOHomeViewController
+@implementation HomeViewController
 
 
 static NSString *kCellIdentifier = @"SPGooglePlacesAutocompleteCell";

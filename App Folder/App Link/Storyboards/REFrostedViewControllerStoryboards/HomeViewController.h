@@ -1,6 +1,6 @@
 //
-//  DEMOHomeViewController.h
-//  defEAT
+//  HomeViewController.h
+//  Let's Eat
 //
 
 #import <UIKit/UIKit.h>
@@ -15,7 +15,7 @@
 @class SPGooglePlacesAutocompleteQuery;
 
 
-@interface DEMOHomeViewController : UIViewController <UISearchBarDelegate, UITableViewDataSource, UITableViewDelegate, UISearchDisplayDelegate, UISearchBarDelegate, CLLocationManagerDelegate>  {
+@interface HomeViewController : UIViewController <UISearchBarDelegate, UITableViewDataSource, UITableViewDelegate, UISearchDisplayDelegate, UISearchBarDelegate, CLLocationManagerDelegate>  {
     
     CLGeocoder *geocoder;
     NSArray *searchResultPlaces;
